@@ -18,9 +18,10 @@ The difficulty of the game is increased as the user progresses through the quest
 
 I recreated the bulbs on my iPad and pencil, and I created a function that randomly generates a number and displays it using the bulbs. The user then has to input their answer on the whiteboard until they complete all the questions.
  
-Here are some images of my game!
-<img src="/Week-0-Scratch/Notes/Images/blackBox.jpeg" alt="Scratch Binary game intro" style="width:350px;">
-<img src="/Week-0-Scratch/Notes/Images/blackBox.jpeg" alt="Scratch Binary game question" style="width:350px;">
+Here are some images of my game!  
+<img src="/Week-0-Scratch/Notes/Images/Scratch-bulbs-intro.jpeg" alt="Scratch Binary game intro" style="width:250px;">
+<img src="/Week-0-Scratch/Notes/Images/Scratch-bulbs-input.jpeg" alt="Scratch Binary game input" style="width:250px;">
+<img src="/Week-0-Scratch/Notes/Images/Scratch-bulbs-question-right.jpeg" alt="Scratch Binary game question right" style="width:250px;">
 
 
 
