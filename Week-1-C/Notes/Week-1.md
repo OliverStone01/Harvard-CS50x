@@ -1,13 +1,20 @@
 ## 📚 Harvard CS50 Week 1 Notes
 
 ### Summary
-- Lecture: 
-- Summary here
+- Lecture: https://www.youtube.com/watch?v=89cbCbWrM4U
+- 
 ---
 
 ### Notes:
 
-Last week, we explored Scratch, a visual programming language. All the essential programming concepts in Scratch, such as `functions`, `conditionals`, `loops`, and `variables`, are fundamental building blocks found in any programming language. Machines only understand binary, while humans write source code as human-readable lists of instructions. This source code is converted into machine code, a pattern of ones and zeros that produces desired effects. A special software called a compiler can convert source code into machine code.
+Last week, we explored Scratch and all the essential programming concepts in Scratch:
+- `functions`
+- `conditionals`
+- `loops`
+- `variables`
+
+Computers only understand binary, while humans write source code (human-readable lists of instructions).
+This source code is converted into machine code (Binary 1's and 0's) using software called a compiler.
 
 ### Visual Studio Code
 
