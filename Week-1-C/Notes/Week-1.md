@@ -431,7 +431,7 @@ Your code can be evaluated on three points.
 
 Imagine we wanted to emulate the visuals of the game Super Mario Bros. Let's look at these four question marks.
 
-<img src="Mario-four-question-marks." alt="Mario's 4 question marks: ????">
+<img src="/Week-1-C/Notes/Images/Mario-four-question-marks.png" alt="Mario's 4 question marks: ????" width="300px">
 
 Well, how about we print four question marks using a `for` loop without the `\n` to prevent the line from ending, and then print the line break at the end once the `for` loop has finished:
 ```
@@ -449,7 +449,8 @@ int main(void)
 ```
 
 What about if we wanted to do three bricks up like this: 
-<img src="Mario-three-bricks." alt="3 bricks stacked one on top of the other.">
+
+<img src="/Week-1-C/Notes/Images/Mario-3-bricks.png" alt="Mario's 3 bricks" width="300px">
 
 What we could do is use `#` to recreate the brick and just use a for loop to print a brick and a new line:
 ```
@@ -467,7 +468,7 @@ int main(void)
 
 What about if we wanted a three-by-three brick area like this:
 
-<img src="Mario-3x3." alt="3 bricks stacked one on top of the other.">
+<img src="/Week-1-C/Notes/Images/Mario-3x3.png" alt="Mario's block area" width="300px">
 
 We can combine the last two ideas together to put a for loop that prints a new line with a for loop inside of that, that prints three blocks high. Like this:
 ```
