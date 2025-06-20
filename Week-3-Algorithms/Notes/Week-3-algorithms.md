@@ -21,7 +21,7 @@ This method is great because if you double the data set, you only need to add on
 
 Last week, we looked at arrays and how data is stored. Metaphorically, imagine an array like a series of separate doors:
 
-<img lockers>
+<img src="/Week-3-Algorithms/Notes/Images/lockers.png" alt="seven lockers" width="350px">
 
 In the lecture, we are now looking at an array of size 7:
 ```
@@ -45,7 +45,7 @@ This algorithm would start at one end, checking each door going down the line un
 ### Running Time
 Running time involves an analysis using big O notations.
 
-<img graff>
+<img src="/Week-3-Algorithms/Notes/Images/time-graph.png" alt="seven lockers" width="350px">
 
 O = Big O notation.
 
@@ -223,7 +223,7 @@ Sorting is taking an unsorted list of values and transforming them into a sorted
 
 The first we will look at is `Selection Sort`. We can represent the spaces in an array like this (`n` being the length of the array).
 
-<img selection sort>
+<img src="/Week-3-Algorithms/Notes/Images/second-lockers.png" alt="seven lockers" width="350px">
 
 In pseudocode, we could do something like:
 ```
@@ -231,7 +231,6 @@ For i from 0 to n-1
   Find smallest number between numbers[i] and numbers[n-1]
   Swap smallest number with numbers[i]
 ```
-
 -----
 
 ### Bubble Sort
