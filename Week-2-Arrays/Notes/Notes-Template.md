@@ -11,9 +11,7 @@
 - 🔐 Basic building blocks of cryptography.
 ---
 
-### Notes:
-
-#### Compiling
+### Compiling
 - Encryption is taking plain text and hiding it from people who try to look at it.
 - Decrypting is the act of taking the encrypted text and returning it to human-readable form.
 
@@ -44,14 +42,16 @@ Compiling is done in 4 steps:
 - Assembling (Converting assembly code into machine code.)
 - Linking (Takes all the machine code and combine it all together.)
 
-#### Debugging
+-----
+
+### Debugging
 Everyone makes mistakes when coding. Debugging is the process of locating and removing bugs from your code. One type of debugging is called `rubber ducking`. This involves taking an inanimate object and talking through the issue to find the issue in your code.
 
 A second tool is called `debugger`. This software allows you to place a stop alongside your code and step through line by line to see where your code goes wrong. To run the debugger, use `debug50 ./buggy0`.
 
 -----
 
-#### Arrays
+### Arrays
 Each data type requires a certain amount of system resources:
 - `bool` 1 byte
 - `int` 4 bytes
@@ -63,11 +63,7 @@ Each data type requires a certain amount of system resources:
 
 In your computer, you only have a finite amount of memory available. In your memory, you can imagine a `char` might look something like this:
 
-<img>
-
-An `int` might look like this:
-
-<img>
+<img src="/Week-2-Arrays/Notes/Images/memmory-squares.png" alt="Memmory Squares" width="350px">
 
 Let's create a programme that explores this. Create a file called scores.c
 ```
@@ -87,7 +83,7 @@ int main(void)
 ```
 Storing these integers would look like this:
 
-<img>
+<img src="/Week-2-Arrays/Notes/Images/char-in-memory.png" alt="Integer in memory" width="350px">
 
 `Arrays` are a sequence of values that are stored back-to-back in memory. `int scores[3]` is a way of telling the compiler to provide you with three back-to-back places in memory of size `int` to store three `scores`.
 
@@ -169,8 +165,9 @@ float average(int length, int array[])
   return sum / (float) length;
 }
 ```
+-----
 
-#### Strings
+### Strings
 A `string` is an array of variables of type `char` (an array of characters). Let's create a file called `hi.c` and explore this further:
 ```
 // Prints chars
@@ -203,9 +200,11 @@ By doing %i (displaying the letters as integers), you can see the ASCII value of
 
 Consider the following image, you can see how a string is an array of characters that end with a character called a `NUL character`. This character tells the compiler that this is the end of the string.
 
-<img>
+<img src="/Week-2-Arrays/Notes/Images/string-in-memory.png" alt="Memmory Squares" width="350px">
 
-#### String Length
+-----
+
+### String Length
 A common problem within programming, more with C specifically, is discovering the length of an array. Let's create a file called `length.c`:
 ```
 // Determines the length of a string
@@ -291,8 +290,9 @@ int main(void)
   printf("\n");
 }
 ```
+-----
 
-#### Command-Line Arguments
+### Command-Line Arguments
 `Command-Line arguments` are those arguments that are passed to your programme at the command line. Let's create a file called greet.c that greets the user taking an input from the command line:
 ```
 // Uses get_string
@@ -326,8 +326,8 @@ int main(int argc, string argv[])
   }
 }
 ```
-
-#### Exit Status
+-----
+### Exit Status
 When a programme ends, a special exit code is provided to the computer. If the programmer exits without any errors, the status code 0 is provided to the computer. If there is an error, typically 1 is returned to the computer. Here is some code that implements this and displays the exit code depending on whether the programme ran successfully or not:
 ```
 // Returns explicit value from main
@@ -348,12 +348,14 @@ int main(int argc, string argv[])
 ```
 You can type `echo $?` in the terminal to see the last exit code.
 
-#### Cryptography
+-----
+
+### Cryptography
 Cryptography is the art of ciphering and deciphering a message. With the building blocks learned from arrays, chars, and strings, you can cipher and decipher a message.
 
 `plaintext` and a `key` are provided to a `cipher`, resulting in ciphered text.
 
-<img>
+<img src="/Week-2-Arrays/Notes/Images/encryption-table.png" alt="Char in memory" width="350px">
 
 The key is a special argument passed to the cipher along with the plaintext. The cipher uses the key to make decisions about how to implement its cipher algorithm.
 
