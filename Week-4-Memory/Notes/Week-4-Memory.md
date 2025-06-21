@@ -13,7 +13,7 @@ Pixels are squares that make up screens to display diffrent colours. They are ar
 ### Hexadecimal
 RGB (Red, Green, and Blue) are numbers that represent the amount of each of these colours.
 
-<img src="/Week-4-Memory/Notes/Images/colour-picker.png" alt="Smiley pixle art" width="300px">
+<img src="/Week-4-Memory/Notes/Images/colour-picker.png" alt="colour picker from photoshop" width="300px">
 
 You can see from the image above that the colour is not just represented by three values. There is also a little box with a `#` next to it. This box allows you to enter a hexidecimal number to pick a colour.
 
@@ -47,7 +47,7 @@ printf("%p\n"
 ```
 As you will see, `%p` shows the address in memory. `&n` is translated to "The address of `n`". this will return an address beginning with `0x`
 
-<img memory grid>
+<img src="/Week-4-Memory/Notes/Images/memory-grid.png" alt="Memory grid" width="300px">
 
 A pointer is a variable that stores the address of something.
 ```
