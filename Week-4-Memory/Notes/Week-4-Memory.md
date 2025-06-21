@@ -7,7 +7,7 @@
 ### Pixel Art
 Pixels are squares that make up screens to display diffrent colours. They are arranged on a up-down, left-right grid. You can imagine an image as a map of bits where zeros represent black and ones represent white.
 
-<img smiley face>
+<img src="/Week-4-Memory/Notes/Images/smiley.png" alt="Smiley pixle art" width="300px">
 
 -----
 ### Hexadecimal
