@@ -102,11 +102,11 @@ int main(void)
 ```
 Recall that a string is simply an array of characters. For example, here is `s = "HI!"` represented as such:
 
-<img string-one>
+<img src="/Week-4-Memory/Notes/Images/memory-grid.png" alt="Memory grid" width="300px">
 
 However, what is `s`? Well, this whole time you have been using CS50 header for string, what is actually happening is `s` is a pointer that is pointing at the first byte in the string in memory, then the the code is printing until it finds the `\0`.
 
-<img string-two>
+<img src="/Week-4-Memory/Notes/Images/hello-memory.png" alt="Memory representing hello" width="300px">
 
 We can see this in code by doing:
 ```
