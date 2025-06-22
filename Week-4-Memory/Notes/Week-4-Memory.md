@@ -140,6 +140,25 @@ int main(void)
 
 -----
 
+### Pointer Arithmetic
+
+Pointer Arithmetic is the ability to do math on locations of memory.
+
+What we are doing is setting a string at location s, then printing each character at s + 1 using pointer arithmetic.
+```
+// Print substrings via pointer arithmetic
+#include <stdio.h>
+
+int main(void)
+{
+  char *s = "HI!";
+  printf("%s\n", s);
+  printf("%s\n", s + 1);
+  printf("%s\n", s + 2);
+}
+```
+-----
+### String Comparison
 
 
 
