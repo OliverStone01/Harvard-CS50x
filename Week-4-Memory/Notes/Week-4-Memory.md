@@ -159,6 +159,139 @@ int main(void)
 ```
 -----
 ### String Comparison
+A string of characters is simply an array of characters identified by the location of its first byte.
+
+Earlier we looked at comparing two integers like this:
+```
+// Compares two integers
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+  // Get two integers
+  int i = get_int("i: ");
+  int j = get_int("j: ");
+
+  // Compare integers
+  if (i == j)
+  {
+    printf("Same\n");
+  }
+  else
+  {
+    printf("Diffrent\n");
+  }
+}
+```
+This code take two integers and compares them using the == (equals) operator. The issue we have when comparing two strings is, we are unable to use the same equal to operator.
+
+What we will use instead is a function from the `string.h` library called `strcmp`:
+```
+// Compare strings using strcmp
+
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+  // Get two strings
+  char *s = get_string("s: ");
+  char *t = get_string("t: ");
+
+  // Compare strings
+  if (strcmp(s, t) == 0)
+  {
+    printf("Same\n");
+  }
+  else
+  {
+    printf("Diffrent\n");
+  }
+}
+```
+`Strcmp` compares the strings and returns 0 if the strings match.
+
+-----
+### Copying and malloc
+A common thing to do in programming is copying one string to another. To achieve this, what we can do is ask the user to input a string, store that string under a variable called s. Then, say we wanted to move that string to a variable called t, We can create a variable called t and set it equal to s.
+```
+// Get a string and capitalise
+
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+  // Get a string
+  string s = get_string("s: ");
+
+  // Copy string's address
+  string t = s;
+
+  // Capitalize first letter in string
+  t[0] = toupper(t[0]);
+
+  // Print string twice
+  printf("s: %s\n", s);
+  printf("t: %s\n", t);
+}
+```
+The issue with this method is we are not actualy copying the string, all we are doing is pointing to the string at `s`. What we need to do use a new tool called `Maloc`. `Maloc` allows us to tell the compiler to make space in memory. To figure out how much memory we need, we can use `strlen` to get the length of the string (+1 for the `\0` character) we are trying to copy. Finally, we will use a tool called `strcpy` to copy the string into memory.
+
+There is also one more tool called `free` that we will use to free memory that we are no longer using. This prevents our code from leaking memory.
+
+Here is code implementing all the tools above:
+```
+// Capitalizes a copy of a string without memory errors
+
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void)
+{
+  // Get a string
+  char *s = get_string("s: ");
+
+  if (s == NULL)
+  {
+    return 1;
+  }
+
+  // Allocate memory for another string
+  char *t = malloc(strlen(s) + 1);
+  if (t == NULL)
+  {
+    return 1;
+  }
+
+  // Copy string into memory
+  strcpy(t, s);
+
+  // Capitalize copy
+  if (strlen(t) > 0)
+  {
+    t[0] = toupper(t[0]);
+  }
+
+  // Print strings
+  printf("s: %s\n", s);
+  printf("t: %s\n", t);
+
+  // Free memory
+  free(t);
+  return 0;
+}
+```
+-----
+
 
 
 
