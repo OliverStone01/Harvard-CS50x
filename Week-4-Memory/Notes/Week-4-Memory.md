@@ -473,7 +473,7 @@ If (file == NULL)
 }
 ```
 
-Let’s now look at how you would recreate the cp function which allows you to copy files.
+Let’s look at how you would recreate the cp function which allows you to copy files.
 
 Remember that cp works like such:
 
@@ -503,6 +503,8 @@ Int main(int argc, char *argv[ ])
 ```
 
 This would now copy files.
+
+-----
 
 ### Pointer Information
 
