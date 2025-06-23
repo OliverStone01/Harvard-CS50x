@@ -3,13 +3,15 @@
 ### Summary
 - Summary here
 
----
+-----
+
 ### Pixel Art
 Pixels are squares that make up screens to display diffrent colours. They are arranged on a up-down, left-right grid. You can imagine an image as a map of bits where zeros represent black and ones represent white.
 
 <img src="/Week-4-Memory/Notes/Images/smiley.png" alt="Smiley pixle art" width="300px">
 
 -----
+
 ### Hexadecimal
 RGB (Red, Green, and Blue) are numbers that represent the amount of each of these colours.
 
@@ -30,6 +32,7 @@ Hexidecimal (base-16) is a system of counting that has 16 counting values:
 - 255 is represneted as 255.
 
 -----
+
 ### Pointers
 C has two powerful opertators related to memory:
 - & = provides the address of something stored in memory.
@@ -86,6 +89,7 @@ int main(void)
 You will now see that the `printf` line prints the integer at the location of `p`.
 
 -----
+
 ### Strings
 Now we have an idea of pointers, we can take another look at strings:
 ```
@@ -137,7 +141,6 @@ int main(void)
   printf("%s\n", s);
 }
 ```
-
 -----
 
 ### Pointer Arithmetic
@@ -158,6 +161,7 @@ int main(void)
 }
 ```
 -----
+
 ### String Comparison
 A string of characters is simply an array of characters identified by the location of its first byte.
 
@@ -215,6 +219,7 @@ int main(void)
 `Strcmp` compares the strings and returns 0 if the strings match.
 
 -----
+
 ### Copying and malloc
 A common thing to do in programming is copying one string to another. To achieve this, what we can do is ask the user to input a string, store that string under a variable called s. Then, say we wanted to move that string to a variable called t, We can create a variable called t and set it equal to s.
 ```
