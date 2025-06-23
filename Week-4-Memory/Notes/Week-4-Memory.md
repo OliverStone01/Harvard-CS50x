@@ -292,11 +292,235 @@ int main(void)
 ```
 -----
 
+### Valgrind
+valgrind is a tool that is used to check for memory issues such as memory leaks.
+To use valgrind, initiate your code as valgrind ./{file name}.
+
+-----
+
+### Garbage Values
+When you ask the computer for a block of memory using maloc, there is no guarantee that the memory eill be empty.
+These values held inside of the memory are what as know as garbage values.
+
+-----
+
+### Swapping
+In programming, swapping is a common thing to do. But its hard to do without the need of a temporary holding space.
+
+lets create a function that swaps two integers.
+```
+// failing to swap using a function.
+
+#include <stdio.h>
+
+void swap(int a, int b);
+
+int main(void)
+{
+  int x = 1;
+  int y = 2;
+
+  swap(x, y);
+  printf(" x = %i, y = %i", x, y);
+}
+
+void swap(int a, int b)
+{
+  int temp = a;
+  a = b;
+  b = temp;
+}
+```
+You will notice, when this code is run, the values don't swap.
+Thats because we are only taking a refrence input from x and y.
+To actually swap the numbers, our function needs to be able to swap the values at the locations. 
+Here is what that would look like:
+
+```
+// Swapping integers using pointers.
+
+#include <stdio.h>
+
+void swap(int *a, int *b);
+
+int main(void)
+{
+  int x = 1;
+  int y = 2;
+
+  swap(&x, &y);
+  printf("x = %i, y = %i", x, y);
+}
+
+void swap(int *a, int *b)
+{
+  int tmp = *a;
+  *a = *b;
+  *b = tmp;
+}
+```
+
+-----
+
+### Overflow
+- Heap overflow = Touching parts of memory you are not supposed to.
+- Stack overflow = Calling too many fuctions, causing you to run out of memory.
+- Both are considered buffer overflows.
+
+-----
+
+### Scanf
+Scanf is the built in fuction of get_int fron CS50.
+
+```
+#include <stdio.h>
+
+Int main(void)
+{
+     Int n;
+     Printf(“n: “);
+     Scanf(“%i”, &n);      //Scanf is the opposite of printf and gets the value and places it at address n
+     Printf(“n: %i\n”, n);
+}
+```
 
 
+If you want to do this with a string, you can do the following;
 
+```
+#include <stdio.h>
 
+Int main(void)
+{
+     Char *s;
+     Printf(“s: “);
+     Scanf(“&s”, s);
+     Printf(“s: %s\n”, s);
+}
+```
+This is dangerous and you should use library’s because it doesn’t know how long my string is and doesn’t know how much memory I have.
 
+So whats the best solution?
 
+Use get_string from the cs50 library as you would need to know the length of the string.
 
+-----
+
+### File I/O
+
+- Fopen = opening a file
+- Fclose = closing a file
+- Fprintf = print to a file
+- Fscanf 
+- Fread
+- Fwrite
+- Fseek
+
+What this means is we can use and implement files within our code. 
+
+Here is some code that will create a csv file that stores like a phonebook.
+
+FILE = is a data type that is used when using files.
+
+```
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+Int main(void)
+{
+     FILE *file = fopen(“phonebook.csv”, “w”);   This opens a file into write mode.
+     
+     Char *name = get_string(“Name: “);
+     Char *number = get_string(“Number: “);      Gets inputs from user
+
+     Fprintf(file, “%s,%s\n”, name, number);       Prints to the file
+
+     Fclose(file);      Closes the file.
+}
+```
+
+The problem with this is as a phonebook I want to keep adding information instead of resetting the file which is what write “w” is doing.
+
+So what we are going to do is change this to “a” for append. 
+
+```
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+Int main(void)
+{
+     FILE *file = fopen(“phonebook.csv”, “a”);   This opens a file into write mode.
+     
+     Char *name = get_string(“Name: “);
+     Char *number = get_string(“Number: “);      Gets inputs from user
+
+     Fprintf(file, “%s,%s\n”, name, number);       Prints to the file
+
+     Fclose(file);      Closes the file.
+}
+```
+
+This now adds the name and number each time.
+
+It’s important to check if the file exists as you don’t want the code to crash, so under the FILE do a if function to see:
+
+```
+If (file == NULL)
+{
+     Return 1;
+}
+```
+
+Let’s now look at how you would recreate the cp function which allows you to copy files.
+
+Remember that cp works like such:
+
+Cp source destination
+
+```
+#include <stdio.h>
+#include <stdint.h>
+
+Typedef uint8_t BYTE;  gives me a byte of 8 bits 
+
+Int main(int argc, char *argv[ ])
+{
+     FILE *src = fopen(argv[1], “rb”);   Takes input from the cml and opens the file in read binary (rb)
+     FILE *dst = fopen(argv[2], “wb”);   Open the next File in write binary (wb).
+
+     BYTE b;
+
+     While(fread(&b, sizeof(b), 1, src) != 0)     This loops over the file byte by byte
+     {
+          Fwrite(&b, sizeof(b), 1, dst);
+     }, 
+     
+     Fclose(dst)
+     Fclose(Src);
+}
+```
+
+This would now copy files.
+
+### Pointer Information
+
+Suffix:
+& = Location
+= Points to Location
+
+Sizes:
+uint8_t = 8 bits (1 Byte)
+int16_t = 16 bits (2 Bytes)
+ 
+Structure Examples:
+This assigns a new keyword to your choosing.
+
+Typedef unit8_t Byte
+Typedef int16_t TwoBytes
+
+Variable Examples:
+uint8_t byte; = 8 bit integer variable.
+Int16_t twobytes; 16 bit integer variable
 
