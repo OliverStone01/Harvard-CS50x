@@ -13,7 +13,7 @@ For example, “Queues” in real life are where we line up and do something in 
 
 This could be used on a printer where you store the pixels that need to be printed in a specific order.
 
-`Enqueue`— which means to put someone into a queue.
+`Enqueue`— which means to put someone into a queue.  
 `Dequeue`- which means to take someone out of the queue.
 
 In code, that may look like this:
@@ -38,7 +38,7 @@ This is like a `stack` in data structures. The last piece of data placed in goes
 
 `LIFO`- Last in, First out.
 
-`Push`- to put something onto the stack.
+`Push`- to put something onto the stack.  
 `Pop`- to take something out of a stack.
 
 In code, that may look like this:
