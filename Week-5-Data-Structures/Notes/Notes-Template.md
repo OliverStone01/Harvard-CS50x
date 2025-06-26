@@ -27,6 +27,7 @@ Typedef struct
 } queue;
 ```
 We are storing people of a size of 50 with the data type = “Person”, which, if you recall, is another structure that has been made using Typedef struct. This allows us to create data types inside other data types. The capacity is the maximum size of the queue.
+
 -----
 
 ### Stacks
