@@ -42,6 +42,29 @@ This is like a `stack` in data structures. The last piece of data placed in goes
 `Pop`- to take something out of a stack.
 
 In code, that may look like this:
+```
+Const int CAPACITY = 50;
+
+Typedef struct
+{
+	person people[CAPACITY];
+	int size;
+} stack;
+```
+You can see this is very similar to the queue structure, but the order you remove and add data is how we define the use.
+
+When using arrays, the main problem is that you must declare the size of the array before its use. This can cause problems later down the line, especially if your data expands.
+
+What we are going to use instead is a smarter version.
+
+What we need are these three parts:
+- `struct` = Creates the structure.
+- `.` = This allows you to go inside a structure.
+- `*` = This is the same as when we use pointers.
+- `->` = The same as doing `.` and `*` together.
+
+Let’s say you have an array of [1, 2, 3] and now you have a 4th byte you need to store inside the same array. Well, with using smart arrays, what you are doing is saying, I need to copy the current data inside the array into my newly sized array and place them in the same order, and then place my new data at the end. And of course, free the data from the first array.
+
 
 
 
