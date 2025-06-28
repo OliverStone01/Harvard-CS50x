@@ -123,6 +123,207 @@ Instead of doing the second malloc, what you can do instead is use `realloc` and
 -----
 
 ### Linked Lists
+A linked list is a list where we use pointers to link the elements in the computer’s memory.
+
+For each integer, we are going to allocate an extra byte that contains a pointer for the next integer, and the last integer in the list will be equal to NULL (0x00) so we can identify the end of the list.
+
+To keep track of the entire list, we are going to assign one more pointer address which points to the first integer, known as the head of the linked list.
+
+Although this fixes the problem of not needing data stored contiguously, it does cause an issue with the fact that it spends over twice the amount of data. 
+
+We are going to use structures to create a structure called `Node`. `Node` is a just a container.
+
+```
+// Node structure.
+Typedef struct node
+{
+	int number;
+	struct node *next;
+} node;
+```
+Here is the full code.
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <cs50.h>
+
+Typedef struct node
+{
+	int number;
+	struct node *next;
+} node;
+
+Int main(void)
+{
+	node *list = NULL;
+	
+	for (int i = 0; i < 3; i++)
+	{
+		node *n = malloc(sizeof(node));
+		if (n == NULL)
+		{
+			return 1;
+		}
+		n->number = get_int(“number: “);
+		n->next = list;
+		list = n;
+	}
+
+// time passes
+
+Node *ptr = list;
+While (ptr != NULL)
+{
+	printf(“%i\n”, ptr->number);
+	ptr = ptr->next;
+}
+```
+The reason you get a LIFO (last in, first out) result is because each time you go through the loop, you update the list each time to the latest node.
+
+Let's break it down into steps.
+- Create a structure called Node that stores an integer and an address.
+- Set a variable in this case called list and set its value to NULL.
+- For a set number of times
+	- Create a variable at location *n with type node. (Creates a variable that stores two variables.)
+ 		-  If n == NULL, return 1 as it means there is no memory left.
+	- Set the number, which is the first variable, to the desired value.
+ 	- Set next, which is the second variable, which stores the location to the last location in list.
+  	- Then set the list to n, that way when you loop to the next variable, you will keep track of this location.
+ 
+So that’s how you `prepend`. Now let’s look at `appending`.
+
+This means now you will get the first one in, first one out. Let’s look at some code:
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <cs50.h>
+
+ 
+Typedef struct node
+{
+	int number;
+	struct node *next
+} node;
+
+Int main(void)
+{
+	node *list == NULL;
+
+	for (int i = 0; i < 3; i++)
+	{
+		node *n = malloc(sizeof(node));
+		if (node == NULL)
+		{
+			return 1;
+		}
+		n->number = get_int(“Number: “);
+		n->next = NULL;
+
+		// if list is empty
+		if (list == NULL)
+		{
+			list = n;
+		}
+
+		// if list has numbers already
+		else
+		{
+			for (node *ptr = list; ptr != NULL; ptr->next)
+			{
+				// at the end of list
+				if (ptr->next == NULL)
+				{
+					ptr->next = n;
+					break;
+				}
+			}
+		}
+	}
+
+	for (node *ptr = lists; ptr != NULL; ptr = ptr->next)
+	{
+		printf(“%i\n”, ptr->number);
+	}
+
+
+
+	node *ptr = lists;
+	while (ptr != NULL)
+	{
+		node *next = ptr->next
+		free (ptr);
+		ptr = next;
+	}
+```
+What this does is it checks if the list is empty. If it is, then it adds to the list. Else, it loops through the list, and if the list->next is NULL, then it adds to the ->next part of the list.
+
+If you care about sorted order (smallest to largest), then we can do this:
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+Typedef struct node
+{
+	int number;
+	struct node *next;
+} node;
+
+Int main(void)
+{
+	// memory for numbers
+	node *list = NULL;
+
+	// build list
+	for (int i = 0; i < 3; i++)
+	{
+		// allocate node for number
+		node *n = malloc(sizeof(node));
+		if (n == NULL)
+		{
+			return 1;
+		}
+		n->number = get_int(“Number: “);
+		n->next = NULL;
+
+		// if list is empty
+		if (list == NULL)
+		{
+			list = n;
+		}
+
+		// if number belongs at the beginning of the list
+		else If(n->number < list->number)
+		{
+			n->next = list;
+			list = n;
+		}
+
+		// if number belongs later in list
+		else
+		{
+			// iterate over nodes in list
+			for (node *ptr = list; ptr != NULL; ptr->next)
+			{
+				// if at end of list
+				if (ptr->next  == NULL)
+				{
+					//Append to
+					ptr->next = n;
+					break;
+				}
+			
+
+			// if in middle of list
+			if (n->number < ptr->next->number)
+			{
+				n->next = ptr->nextl
+				prt->next = n;
+				break;
+			}
+		}
+	}
+```
+This goes through each node and checks if the number is bigger or smaller, and then places the node in the list depending on the value.
 
 
 
