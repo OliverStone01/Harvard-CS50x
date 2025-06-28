@@ -387,6 +387,60 @@ This is a great data structure because it allows you to take a key and give it a
 
 -----
 
+### Hash Tables
+
+A hash function, like other functions, takes an input and produces an output. The idea of hashing is that it allows you to control where data goes in memory.
+
+To `bucket` something in computer science means to take an input and place it in a specific location.
+
+If you take a deck of 52 cards. And tried to sort each card. It would be first quicker to sort each type (spade, heart, club, and diamond) into separate buckets and then sort 4 lots of 13. 
+
+The key is to take a large data input and convert it into a fine amount of sorted data.
+
+What we can build is hash tables, which are like arrays and linked lists together.
+
+Say we take 26 buckets as an array, and we give each bucket the value of the ASCII value. If we then get the name “Mario”, we can place Mario in the 12th bucket (0 indexed), then Luigi in the 11th bucket.
+
+How good is it for searching? It’s constant time, because if you gave me Mario, then I know M is the 12th bucket doing the ASCII trick and so I can go straight to that bucket and get the result.
+
+The problem we may run into, though, is something called collisions. Where we may get two names, for example, that start with M.
+
+What we can do is link the similarly named person by using a linked list.
+
+What we can do to code this is create a type of node for a person that stores the name, the number, and then a node for the next space after to make sure we have room for another person.
+```
+Typedef struct node
+{
+	char *name;
+	char *number;
+	struct node *next;
+} node;
+```
+
+If you want a hash table for 26 spaces. We can then do the following:
+```
+Node *table[26];
+```
+What we could do instead of using the linked list function of hash tables. We could increase the amount of buckets for the first three letters in the name. 
+```
+#include <ctype.h>
+
+Unsigned Int hash(const char *word)
+{
+	return toupper(word[0]) - ‘A’;
+}
+```
+This would return a number between 0 and 25.
+
+You can use unsigned integers because we don’t need negative numbers.
+
+The only problem with these larger hash tables is because they take up so much more room.
+
+
+
+
+
+
 
 
 
