@@ -325,10 +325,50 @@ Int main(void)
 ```
 This goes through each node and checks if the number is bigger or smaller, and then places the node in the list depending on the value.
 
+-----
+### Trees
 
+This is a commonly used data structure, where the root starts at the top and then grows down and breaks down. A tree is a two-dimensional structure.
 
+Trees allow for binary search.
 
+If you take an array of numbers:
+```
+1 2 3 4 5 6 7
+```
+And take the middle number as the root `4` and then the middle of the middle `2 / 6` and then the middles of the middles of the middles `1 / 3 / 5 / 7` and branch them out to look like the following:
+```
+		4
+	2		6
+1	       3 5		7
+```
+You can see we have a 2D array where we can take an input, let’s say 5, and binary search by saying, if it’s == to then you have found the number, if it’s less than the current number then go left, if it’s greater than the current number, then go right.
 
+You can see we have a 2D array where we can take an input, let’s say 5, and binary search by doing `if input == n` (n = current number). Then you have found the number; `else, if input < n, go left`; `else, go right`.
+
+Here is a function that returns a bool (yes or no) if it finds the number in the list.
+
+```
+Bool search(node *tree, int number)
+{
+	If (tree == NULL)
+	{
+		return false;
+	}
+	else if (number < tree->number)
+	{
+		return search(tree->left, number);
+	}
+	else if (number > tree->number)
+	{
+		return search(tree->right, number);
+	}
+	else
+	{
+		return true;
+	}
+}
+```
 
 
 
