@@ -436,7 +436,36 @@ You can use unsigned integers because we don’t need negative numbers.
 
 The only problem with these larger hash tables is because they take up so much more room.
 
+-----
 
+### Tries
+
+A tries is a tree of arrays.
+```
+Typedef struct node
+
+{
+	struct node *children[26]
+	char *number;
+} node;
+
+Int parents = 1; 
+
+For (int i = 0; i < parent; i++)
+{
+	a = random pick between 0 and 1.
+	{
+		set allies i to parent[i].allies[a]
+	}
+}
+```
+Create family is called with generation set to 3
+- allocate memory for a new person
+	- Person *p = 2 parents & 2 alilies
+	- If generations is greater than 1
+		- Create 2 new Parents for the current person by calling create family
+
+-----
 
 
 
