@@ -370,8 +370,22 @@ Bool search(node *tree, int number)
 }
 ```
 
+-----
 
+### Dictionary
 
+You can think of a dictionary like this column list:
+```
+   Key (word)   |    Value (Definition)
+ -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+		|
+		|
+		|
+		|
+```
+This is a great data structure because it allows you to take a key and give it a value. Like a phone book, for example. You take a name and give it a phone number. It can be useful for so many different tasks like this.
+
+-----
 
 
 
