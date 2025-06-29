@@ -1,8 +1,10 @@
 ## 📚 CS50 week 6 Python
 
 ### Summary
-- Summary here
+- Python Documents: docs.python.org
+- Python Built in functions: docs.python.org/3/library/functions.html
 
+- 
 ---
 
 In C, everything was basic, where you, as the programmer, told the computer to do everything. Python is a higher-level programming language which does a lot of the lower stuff for you.
@@ -81,6 +83,76 @@ This formats the string. This is called variable interpolation.
 -----
 
 #### Positional parameters
+
+All of these arguments and values that we have been putting inside parentheses when calling a function. These are called `positional parameters` because the position has always been important.
+
+-----
+
+#### Named parameters
+
+This means you can provide the name of a variable and its value. 
+
+-----
+
+### New lines
+
+When using Python, at the end of each line, instead of needing to use `\n` like in C. This is already done for you.
+
+But what about if you don’t want a new line?
+
+Inside the print function, it looks like this:
+```
+Print(*objects, sep=‘ ‘, end=‘\n’, file=none, flush=False)
+```
+- `*object` = 0 or more objects will be in here.
+- `sep` = separate, which has a value of 1 space.
+- `end` = end of the print function.
+
+Because they are named parameters, we can override their default values. So to stop a new line from forming, we can do the following:
+```
+Print(“hello, world”, end=“!”)
+```
+This will now print “Hello, world!” instead of a new line after “Hello, world.”
+
+If you want to add something to the end,  then give yourself a new line. You can do the following:
+```
+Print(“hello, world”, end=“!\n”)
+```
+-----
+
+In Python, there is no difference between “ and ‘. But in CS50 we are going to keep using “”.
+
+In C, using integers, we would do the following:
+```
+int counter =0;
+```
+In Python, we do this:
+```
+Counter = 0
+```
+
+In C, Counting looked like this:
+```
+Counter = counter + 1;
+```
+In Python:
+```
+Counter = counter + 1
+```
+In C, we also had a shortcut for counting:
+```
+Counter += 1;
+```
+We can do the same in python:
+```
+Counter += 1
+```
+When it comes to counting, there is only one thing Python can't do that C can:
+```
+Counter++;
+```
+
+-----
 
 
 
