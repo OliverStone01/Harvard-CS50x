@@ -663,11 +663,7 @@ With open(“phonebook.csv”, “a”) as file:
 The other part of Python is that you can install third-party functions and packages by using pip install. For example, in our current code space, we have installed:
 ```
 pip install cs50
-'''
-
-
-
-
+```
 
 
 
