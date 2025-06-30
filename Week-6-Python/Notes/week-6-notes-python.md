@@ -1,11 +1,21 @@
 ## 📚 CS50 week 6 Python
 
 ### Summary
-- Python Documents: docs.python.org
-- Python Built in functions: docs.python.org/3/library/functions.html
+- [Python Documents](docs.python.org)
+- [Python Built in functions](docs.python.org/3/library/functions.html)
+- Python
+  - Variable
+  - Conditionals
+  - Loops
+  - Types
+  - Object-oriented programming
+  - Truncation and floating point imprecision
+  - Exceptions
+  - Dictionaries
+  - Command-line arguments
+  - Third-party libraries
 
-- 
----
+-----
 
 In C, everything was basic, where you, as the programmer, told the computer to do everything. Python is a higher-level programming language which does a lot of the lower stuff for you.
 
