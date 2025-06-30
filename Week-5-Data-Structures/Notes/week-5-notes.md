@@ -75,7 +75,7 @@ We no longer want to care about storing data back-to-back. We are going to use p
 #include <stdio.h>
 #include <stdlib.h>
 
-Int main(void)
+int main(void)
 {
 	int *list = malloc(3 * sizeof(int));
 	if (list == NULL)
@@ -158,7 +158,7 @@ Typedef struct node
 	struct node *next;
 } node;
 
-Int main(void)
+int main(void)
 {
 	node *list = NULL;
 	
@@ -175,9 +175,8 @@ Int main(void)
 	}
 
 // time passes
-
-Node *ptr = list;
-While (ptr != NULL)
+node *ptr = list;
+while (ptr != NULL)
 {
 	printf(“%i\n”, ptr->number);
 	ptr = ptr->next;
@@ -210,7 +209,7 @@ Typedef struct node
 	struct node *next
 } node;
 
-Int main(void)
+int main(void)
 {
 	node *list == NULL;
 
@@ -273,7 +272,7 @@ Typedef struct node
 	struct node *next;
 } node;
 
-Int main(void)
+int main(void)
 {
 	// memory for numbers
 	node *list = NULL;
@@ -354,9 +353,9 @@ You can see we have a 2D array where we can take an input, let’s say 5, and bi
 Here is a function that returns a bool (yes or no) if it finds the number in the list.
 
 ```
-Bool search(node *tree, int number)
+bool search(node *tree, int number)
 {
-	If (tree == NULL)
+	if (tree == NULL)
 	{
 		return false;
 	}
@@ -424,13 +423,13 @@ Typedef struct node
 
 If you want a hash table for 26 spaces. We can then do the following:
 ```
-Node *table[26];
+node *table[26];
 ```
 What we could do instead of using the linked list function of hash tables. We could increase the amount of buckets for the first three letters in the name. 
 ```
 #include <ctype.h>
 
-Unsigned Int hash(const char *word)
+unsigned int hash(const char *word)
 {
 	return toupper(word[0]) - ‘A’;
 }
@@ -454,9 +453,9 @@ Typedef struct node
 	char *number;
 } node;
 
-Int parents = 1; 
+int parents = 1; 
 
-For (int i = 0; i < parent; i++)
+for (int i = 0; i < parent; i++)
 {
 	a = random pick between 0 and 1.
 	{
