@@ -24,14 +24,14 @@ To show how much easier Python will be, here are a few C to Python examples:
 // Print Hello, World in C.
 #include <stdio.h>
 
-Int main(void)
+int main(void)
 {
 	printf(“Hello, World\n”);
 }
 ```
 Here is the same code written in python:
 ```
-Print(“Hello, World”)
+print(“Hello, World”)
 ```
 
 -----
@@ -46,7 +46,7 @@ make hello
 ```
 Now in Python:
 ```
-Python hello.py
+python hello.py
 ```
 
 -----
@@ -76,17 +76,17 @@ Let's create some code that takes an input from a user `name`, and prints hello,
 answer = get_string(“what’s your name? “)
 
 // print answer
-Print(“hello, “ + answer)
+print(“hello, “ + answer)
 ```
 This is known as concatenation. Where you take a line and add it to the end.
 
 If you were to send many functions to the print function, it would then print each function one after the other with a single space in between.
 ```
-Print(“hello,”, answer)
+print(“hello,”, answer)
 ```
 But the most common way to print a function in Python is:
 ```
-Print(f”hello, {answer}”)
+print(f”hello, {answer}”)
 ```
 This formats the string. This is called variable interpolation.
 
@@ -112,7 +112,7 @@ But what about if you don’t want a new line?
 
 Inside the print function, it looks like this:
 ```
-Print(*objects, sep=‘ ‘, end=‘\n’, file=none, flush=False)
+print(*objects, sep=‘ ‘, end=‘\n’, file=none, flush=False)
 ```
 - `*object` = 0 or more objects will be in here.
 - `sep` = separate, which has a value of 1 space.
@@ -120,13 +120,13 @@ Print(*objects, sep=‘ ‘, end=‘\n’, file=none, flush=False)
 
 Because they are named parameters, we can override their default values. So to stop a new line from forming, we can do the following:
 ```
-Print(“hello, world”, end=“!”)
+print(“hello, world”, end=“!”)
 ```
 This will now print “Hello, world!” instead of a new line after “Hello, world.”
 
 If you want to add something to the end,  then give yourself a new line. You can do the following:
 ```
-Print(“hello, world”, end=“!\n”)
+print(“hello, world”, end=“!\n”)
 ```
 -----
 
@@ -138,36 +138,36 @@ int counter =0;
 ```
 In Python, we do this:
 ```
-Counter = 0
+counter = 0
 ```
 
 In C, Counting looked like this:
 ```
-Counter = counter + 1;
+counter = counter + 1;
 ```
 In Python:
 ```
-Counter = counter + 1
+counter = counter + 1
 ```
 In C, we also had a shortcut for counting:
 ```
-Counter += 1;
+counter += 1;
 ```
 We can do the same in python:
 ```
-Counter += 1
+counter += 1
 ```
 When it comes to counting, there is only one thing Python can't do that C can:
 ```
-Counter++;
+counter++;
 ```
 
 -----
 
 ### Data types
 
-- `Bool` = True or False
-- `Float` = Floating point numbers (decimal)
+- `bool` = True or False
+- `float` = Floating point numbers (decimal)
 - `int` = Integer (whole number)
 - `str` = String
 
