@@ -1,0 +1,46 @@
+sort1 uses: bubble sort
+
+How do you know?:
+when comparing sort 1 and 3 in large sorted numbers, this was quicker as it doesnt need to constantly loop through.
+tests:
+sort 1 - sorted10000 = 0.051 seconds
+sort 3 - sorted10000 = 0.159 seconds
+
+sort2 uses: merge sort
+
+How do you know?:
+Merge sort should be the quickest at sorting random numbers and the 2 others should be very similar.
+tests:
+sort 1 - random5000 = 0.051 seconds
+sort 2 - random5000 = 0.015 seconds
+sort 3 - random5000 = 0.059 seconds
+
+sort3 uses: selection sort
+
+How do you know?: took the longest to run large sorted numbers as it needs to loop though each number no matter what.
+
+
+there are 3 types of algorithms:
+Bubble sort - moves the largest numbers to the top by comparing 2 numbers.
+Merge sort - splits the left and right sides and merges (sorts) the numbers.
+Selection sort - Goes through the list looking for the smallest number.
+
+Merge sort should be the quickest to sort a list of random numbers while the other 2 shoukd be very similar.
+Bubble sort should be the quickest to sort a list of pre organised numbers as it only needs to go through the list once.
+selection sort will be the slowest with a pre organised list because it needs to go through the list everytime to check each number.
+
+tests:
+sort 1 - random5000 = 0.051 seconds
+sort 2 - random5000 = 0.015 seconds
+sort 3 - random5000 = 0.059 seconds
+
+from this test we can conclude that Merge sort is sort 2.
+
+to find bubble sort, we can compare sort 1 and sort 3 to see which is quicker.
+
+tests:
+sort 1 - sorted5000 = 0.035 seconds
+sort 3 - sorted5000 = 0.039 seconds
+
+sort 1 - sorted10000 = 0.051 seconds
+sort 3 - sorted10000 = 0.159 seconds
