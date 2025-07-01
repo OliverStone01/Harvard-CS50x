@@ -3,7 +3,7 @@
 ### Mario (less)
 Toward the end of World 1-1 in Nintendo’s Super Mario Bros., Mario must ascend right-aligned pyramid of bricks, as in the below.
 
-<img src="/Week-1-C/Notes/Images/Mario-less.png" alt="Mario less wedge" width="250px"> 
+<img src="/week-1-c/notes/assets/Mario-less.png" alt="Mario less wedge" width="250px"> 
 
 In a file called mario.c in a folder called mario-less, implement a program in C that recreates that pyramid, using hashes (#) for bricks, as in the below:
 ```
@@ -29,7 +29,7 @@ Re-prompt the user, again and again as needed, if their input is not greater tha
 ### Mario (more)
 Toward the beginning of World 1-1 in Nintendo’s Super Mario Brothers, Mario must hop over adjacent pyramids of blocks, per the below.
 
-<img src="/Week-1-C/Notes/Images/Mario-more.png" alt="Mario more wedge" width="250px"> 
+<img src="/week-1-c/notes/assets/Mario-more.png" alt="Mario more wedge" width="250px"> 
 
 In a file called mario.c in a folder called mario-more, implement a program in C that recreates that pyramid, using hashes (#) for bricks, as in the below:
 ```
