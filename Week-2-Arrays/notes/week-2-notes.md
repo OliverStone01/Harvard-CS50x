@@ -63,7 +63,7 @@ Each data type requires a certain amount of system resources:
 
 In your computer, you only have a finite amount of memory available. In your memory, you can imagine a `char` might look something like this:
 
-<img src="/Week-2-Arrays/Notes/Images/memmory-squares.png" alt="Memmory Squares" width="350px">
+<img src="/week-2-arrays/notes/assets/memmory-squares.png" alt="Memmory Squares" width="350px">
 
 Let's create a programme that explores this. Create a file called scores.c
 ```
@@ -83,7 +83,7 @@ int main(void)
 ```
 Storing these integers would look like this:
 
-<img src="/Week-2-Arrays/Notes/Images/char-in-memory.png" alt="Integer in memory" width="350px">
+<img src="/week-2-arrays/notes/assets/char-in-memory.png" alt="Integer in memory" width="350px">
 
 `Arrays` are a sequence of values that are stored back-to-back in memory. `int scores[3]` is a way of telling the compiler to provide you with three back-to-back places in memory of size `int` to store three `scores`.
 
@@ -200,7 +200,7 @@ By doing %i (displaying the letters as integers), you can see the ASCII value of
 
 Consider the following image, you can see how a string is an array of characters that end with a character called a `NUL character`. This character tells the compiler that this is the end of the string.
 
-<img src="/Week-2-Arrays/Notes/Images/string-in-memory.png" alt="Memmory Squares" width="350px">
+<img src="/week-2-arrays/notes/assets/string-in-memory.png" alt="Memmory Squares" width="350px">
 
 -----
 
@@ -355,7 +355,7 @@ Cryptography is the art of ciphering and deciphering a message. With the buildin
 
 `plaintext` and a `key` are provided to a `cipher`, resulting in ciphered text.
 
-<img src="/Week-2-Arrays/Notes/Images/encryption-table.png" alt="Char in memory" width="350px">
+<img src="/week-2-arrays/notes/assets/encryption-table.png" alt="Char in memory" width="350px">
 
 The key is a special argument passed to the cipher along with the plaintext. The cipher uses the key to make decisions about how to implement its cipher algorithm.
 
