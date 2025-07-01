@@ -1,7 +1,12 @@
 ## 📚 CS50 week 7 - SQL
 
 ### Summary
-- Summary here
+- Flat-file databases
+- SQL commands and functions
+- Primary and foreign keys
+- Joins
+- Indexes
+- SQL in Python
 
 ---
 Quick note: 
