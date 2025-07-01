@@ -148,7 +148,7 @@ Data in Databases are stored in tables (as mentioned before). In most software, 
 
 -----
 
-#### Creating a new database:
+### Creating a new database:
 ```
 sqlite3 favourites.db
 ```
@@ -156,7 +156,7 @@ The `.db` is the standard extension for databases.
 
 -----
 
-#### Creating a new table:
+### Creating a new table:
 ```
 CREATE TABLE table (column type, ...);
 ```
@@ -192,7 +192,7 @@ Here are all the diffrent data types:
 
 -----
 
-#### Importing a database:
+### Importing a database:
 Sqlite can import different text files and such, so the first thing we need to do is set the mode:
 ```
 .mode csv
@@ -205,7 +205,7 @@ From the terminal, let’s import a CSV file into a table called favourites:
 
 -----
 
-#### Opening and quitting databases:
+### Opening and quitting databases:
 
 To quit a program inside of sqlite3, use `.quit`.
 
@@ -220,7 +220,7 @@ sqlite3 favourites.db
 
 Let's now start looking around sqlite3 and the database we have imported. But first, we need to know what tables we have available.
 
-#### Display Tables available:
+### Display Tables available:
 ```
 .Schema
 ```
@@ -236,7 +236,7 @@ This shows a three-column table. It will always assume that the data is text, bu
 
 -----
 
-#### Reading data from a table.
+### Reading data from a table.
 
 To read everything in a table:
 ```
@@ -251,7 +251,7 @@ SELECT language FROM favourites;
 
 -----
 
-#### Functions
+### Functions
 
 Aside from `SELECT *`, there are a few more functions to use:
 - `AVG` = Computes averages.
@@ -264,7 +264,7 @@ Aside from `SELECT *`, there are a few more functions to use:
 
 Let's try some out.
 
-#### Count:
+### Count:
 ```
 SELECT COUNT(*) FROM favourites;
 ```
@@ -275,7 +275,7 @@ COUNT( * )
    313
 ```
 
-#### Distinct:
+### Distinct:
 Use `DISTINCT` to see each diffrent `language` from `favourites`:
 ```
 SELECT DISTINCT language FROM favourites;
@@ -289,7 +289,7 @@ C
 Scratch
 ```
 
-#### Count and distinct:
+### Count and distinct:
 
 You can also combine the `COUNT` and `DISTINCT` to see the total number of types:
 ```
@@ -304,7 +304,7 @@ COUNT(DISTINCT languages)
 
 -----
 
-#### More functions
+### More functions
 
 There is also some other functions:
 - `GROUP BY`
@@ -314,7 +314,7 @@ There is also some other functions:
 - `WHERE`
 - `OR`
 
-#### Count and where:
+### Count and where:
 Let's use `COUNT` and `WHERE` to count the total rows containing the language `C`:
 ```
 SELECT COUNT( * ) FROM favourites WHERE language = ‘c’;
@@ -326,7 +326,7 @@ COUNT(*)
   59
 ```
 
-#### Count, where and:
+### Count, where and:
 Now, let's combine `COUNT`, `WHERE`, and `AND` to see how many rows include the language `C` and problem `Hello, world`:
 ```
 SELECT COUNT(*) FROM favourites  WHERE language = ‘c’ AND problem = ‘Hello, World’;
@@ -345,7 +345,7 @@ SELECT COUNT(*) FROM “favourites” WHERE “language” = ‘c’ AND (“pro
 Quick note: you can see when using `it's`, we use double`''` to indicate that its an apostrophe, not the end of the quote: `it''s`.
 
 
-#### Like:
+### Like:
 Let's use `Like` to `SELECT` item's that container the text in the name:
 ```
 SELECT COUNT(*) FROM favourites WHERE language = ‘c’ AND problem LIKE ‘Hello, %’;
@@ -368,7 +368,7 @@ Python   | 243
 SQL      | 11
 ```
 
-#### Order by:
+### Order by:
 Let's now use `ORDER BY` to sort them by count:
 ```
 SELECT language, COUNT(*) FROM favourites GROUP BY language ORDER BY COUNT(*);
@@ -395,7 +395,7 @@ C        | 59
 SQL      | 11
 ```
 
-#### AS:
+### AS:
 Something we can do with all of these is use `AS` to display the value as a diffrent name.
 ```
 SELECT language, COUNT(*) AS n FROM favourites GROUP BY language ORDER BY n DESC;
@@ -409,7 +409,7 @@ C        | 59
 SQL      | 11
 ```
 
-#### LIMIT:
+### LIMIT:
 Let’s say you have thousands of lines of data and you only want to see the top ones. You can use LIMIT to fix that.
 ```
 SELECT language, COUNT(*) AS n FROM favourites GROUP BY language ORDER BY n DESC LIMIT 1;
@@ -418,7 +418,7 @@ This will cause the output to only be one line.
 
 -----
 
-#### Insert data:
+### Insert data:
 To insert data into a table, you can do the following:
 ```
 INSERT INTO table (column, . . .) VALUES(value, . . .);
@@ -431,7 +431,7 @@ If you have an absent value, sql will replace this with `null`.
 
 -----
 
-#### Delete
+### Delete
 Let's look at how you will delete data from a table:
 ```
 DELETE FROM table WHERE condition;
@@ -443,7 +443,7 @@ DROP table;
 
 -----
 
-#### Update
+### Update
 We can also update data inside of a database by doing:
 ```
 UPDATE table SET column = value WHERE condition;
@@ -455,7 +455,7 @@ UPDATE favourites SET language = ‘SQL’, problem = ‘Fiftyville’;
 
 -----
 
-#### Nesting queries
+### Nesting queries
 If we wanted to see the top 10 rated shows in a database full of shows, we could do:
 ```
 SELECT show_id FROM ratings WHERE rating >= 6.0 LIMIT 10;
@@ -472,7 +472,7 @@ SELECT title FROM shows WHERE id IN (SELECT show_id FROM ratings WHERE rating >=
 
 -----
 
-#### Join
+### Join
 To join two tables together:
 ```
 SELECT * FROM shows JOIN ratings ON shows.id = ratings.show_id WHERE rating >= 6.0 LIMIT 10;
@@ -481,14 +481,14 @@ As you can see, you mention the first table “shows” then JOIN “ratings”,
 
 ------
 
-#### Equals to
+### Equals to
 ```
 SELECT genre FROM genres WHERE show_id = (SELECT id FROM shows WHERE title = ‘Catweazle’);
 ```
 
 -----
 
-#### Time
+### Time
 If you want to see how long it takes to run the code, you can use:
 ```
 .timer on
@@ -496,7 +496,7 @@ If you want to see how long it takes to run the code, you can use:
 
 -----
 
-#### Indexes
+### Indexes
 
 Using an index creates a quick and efficient way to search using a B-tree. But the cost is that the data will be wider.
 ```
@@ -505,7 +505,7 @@ CREATE INDEX name ON table (column, . . . );
 
 -----
 
-#### Using SQL and Python:
+### Using SQL and Python:
 ```
 from cs50 import SQL
 
