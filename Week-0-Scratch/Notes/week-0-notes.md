@@ -14,7 +14,7 @@
 ### 🧪 Computer Science and Problem Solving
 Computer programming involves taking inputs and producing outputs, solving problems. This course focusses on the 'black box' between input and output.
 
-<img src="/Week-0-Scratch/Notes/Images/blackBox.jpeg" alt="Black Box" style="width:350px;">
+<img src="/week-0-scratch/notes/assets/blackBox.jpeg" alt="Black Box" style="width:350px;">
 
 - ☝️ Unary (Base 1):  
 to count on one finger at a time.
@@ -83,7 +83,7 @@ The ASCII standard was created to map specific letters to specific numbers, as t
 For instance, the letter A was assigned the number 65. in binary, 01000001 represents 65.
 
 📍 Here is the ASCII map:  
-<img src="/Week-0-Scratch/Notes/Images/ASCII-map.jpeg" alt="ASCII Map" style="width:400px;">
+<img src="/week-0-scratch/notes/assets/ASCII-map.jpeg" alt="ASCII Map" style="width:400px;">
 
 If you were to receive a text in binary with the numbers: 72, 73, 33. Using the binary map, the text you received would be:
 ```
@@ -128,7 +128,7 @@ Problem solving is the centre to computer science and programming. An algorithm 
 
 Each approach could be called an algorithm. The speed of each of these algorithms can be pictured as follows in what is called big-O notation:
 
-<img src="/Week-0-Scratch/Notes/Images/algorithm-time.jpeg" alt="Algorithm time comparison chart" style="width:350px;">
+<img src="/week-0-scratch/notes/assets/algorithm-time.jpeg" alt="Algorithm time comparison chart" style="width:350px;">
 
 The first algorithm, highlighted in red, has a big-O of n because if there are 100 names in the phone book, it could take up to 100 tries to find the correct name.
 
@@ -196,12 +196,12 @@ Scratch is a visual programming language developed by MIT. It uses the same esse
 Scratch is an great introduction to computer programming as it lets you play with building blocks visually, without worrying about syntax like curly braces, semicolons, and parentheses.
 
 This is scratches IDE (Integrated Development Environment):  
-<img src="/Week-0-Scratch/Notes/Images/Scratch-IDE.jpeg" alt="Scratch IDE" style="width:300px;">
+<img src="/week-0-scratch/notes/assets/Scratch-IDE.jpeg" alt="Scratch IDE" style="width:300px;">
 
 On the left, you’ll find a palette of building blocks for your programming. To the right of these, you can drag and drop blocks to create a program. To the right of that, you see a stage where your programming comes to life.
 
 Scratch operates on a coordinate system:  
-<img src="/Week-0-Scratch/Notes/Images/Scratch-coordination.jpeg" alt="Scratch coordinate system" style="width:250px;">
+<img src="/week-0-scratch/notes/assets/Scratch-coordination.jpeg" alt="Scratch coordinate system" style="width:250px;">
 
 -----
 
@@ -210,7 +210,7 @@ Scratch operates on a coordinate system:
 First, drag the `when green flag clicked` building block to the programming area. Then, drag the `say` building block to the programming area and attach it to the previous block. Then edit the text to hello, world.
 
 Now when you click the green flag the cat now says "hello, world."  
-<img src="/Week-0-Scratch/Notes/Images/Scratch-hello-world.jpeg" alt="Scratch hello, World!" style="width:350px;">
+<img src="/week-0-scratch/notes/assets/Scratch-hello-world.jpeg" alt="Scratch hello, World!" style="width:350px;">
 
 -----
 
@@ -218,11 +218,11 @@ Now when you click the green flag the cat now says "hello, world."
 
 To make your program more interactive, have the cat greet a specific person. 
 
-<img src="/Week-0-Scratch/Notes/Images/Scratch-hello-you.jpeg" alt="Scratch hello, you!" style="width:250px;">
+<img src="/week-0-scratch/notes/assets/Scratch-hello-you.jpeg" alt="Scratch hello, you!" style="width:250px;">
 
 When the green flag is clicked, the function `ask` is run. It prompts the user for their name, which is stored in the variable `answer`. The program then passes `answer` to the `join` function, which combines the strings `hello` and the name. The result is passed to the say function, which outputs `Hello, and a name`. the program is now interactive.
 
-<img src="/Week-0-Scratch/Notes/Images/Scratch-join.jpeg" alt="Scratch join" style="width:350px;">
+<img src="/week-0-scratch/notes/assets/Scratch-join.jpeg" alt="Scratch join" style="width:350px;">
 
 -----
 
@@ -236,22 +236,22 @@ For instance, hosting a large dinner for friends can be overwhelming, especially
 
 In programming and even within Scratch, we can see abstraction in action.
 
-<img src="/Week-0-Scratch/Notes/Images/Scratch-loop-one.jpeg" alt="Scratch loop" style="width:200px;">
+<img src="/week-0-scratch/notes/assets/Scratch-loop-one.jpeg" alt="Scratch loop" style="width:200px;">
 
 You’re repeating the same thing over and over again. If you see yourself coding the same statements repeatedly, you could be doing something wrong and could use abstracting to clear away this repetitive code.
 
-<img src="/Week-0-Scratch/Notes/Images/Scratch-loop-two.jpeg" alt="Scratch loop" style="width:200px;">
+<img src="/week-0-scratch/notes/assets/Scratch-loop-two.jpeg" alt="Scratch loop" style="width:200px;">
 
 The loop now behaves as before, but the problem is simplified by abstracting the repetition into a block that repeats the code for us.
 
 But this can still be improved:  
-<img src="/Week-0-Scratch/Notes/Images/Scratch-meow-function.jpeg" alt="Scratch meow" style="width:200px;">
+<img src="/week-0-scratch/notes/assets/Scratch-meow-function.jpeg" alt="Scratch meow" style="width:200px;">
 
 We’ve defined a block called `meow`. The `meow` function plays the sound meow and then waits for a second. When the green flag is clicked, the `meow` function repeats three times.
 
 We can even provide a way by which the function can take an input of `n` and repeat `n` times.
 
-<img src="/Week-0-Scratch/Notes/Images/Scratch-function-n.jpeg" alt="Scratch n function" style="width:200px;">
+<img src="/week-0-scratch/notes/assets/Scratch-function-n.jpeg" alt="Scratch n function" style="width:200px;">
 
 Now `n` is taking an input and running the `repeat n` times. This shows how the process of refinement led to better designed code. 
 
