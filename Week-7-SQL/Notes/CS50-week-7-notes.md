@@ -362,6 +362,7 @@ SELECT language, COUNT(*) FROM favourites GROUP BY language;
 Output:
 ```
 Language | count
+- - - - -|- - - -
 C        | 59
 Python   | 243
 SQL      | 11
@@ -375,6 +376,7 @@ SELECT language, COUNT(*) FROM favourites GROUP BY language ORDER BY COUNT(*);
 Output:
 ```
 Language | count
+- - - - -|- - - -
 SQL      | 11
 C        | 59
 Python   | 243
@@ -387,6 +389,7 @@ SELECT language, COUNT(*) FROM favourites GROUP BY language ORDER BY COUNT(*) DE
 Output:
 ```
 Language | count
+- - - - -|- - - -
 Python   | 243
 C        | 59
 SQL      | 11
@@ -400,6 +403,7 @@ SELECT language, COUNT(*) AS n FROM favourites GROUP BY language ORDER BY n DESC
 Output:
 ```
 Language | n
+- - - - -|- - -
 Python   | 243
 C        | 59
 SQL      | 11
