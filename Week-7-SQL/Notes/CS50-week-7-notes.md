@@ -22,9 +22,9 @@ The great thing about this is that most spreadsheet tools allow you to save as a
 
 The top row will usually be the header files, and software will take this into account if you open it in a normal spreadsheet software.
 
-Let’s create some Python code that iterates over a CSV file:
+Let’s create some Python code that iterates over a CSV file using the csv module:
 ```
-import csv 	# imports a lot of the functionality of a CSV file.
+import csv
 
 with open(“Favorites.csv”, “r”) as file:
 	reader = csv.reader(file)
@@ -37,7 +37,10 @@ import csv
 
 With open(“Favorites.csv”, “r”) as file:
 	reader = csv.reader(file)
-	next(reader)				- - - Tells the code to skip this line - - - 
+
+	# Skip line
+	next(reader)
+
 	for row in reader:
 		print(row[1])
 ```
@@ -85,7 +88,8 @@ With open(“Favorites.csv”, “r”) as file:
 		if favourite in counts:
 			counts[favourite] += 1
 		else:
-			counts[favourite] = 1		- - - initialises a key - - -
+			# initialises a key
+			counts[favourite] = 1
 
 for favourite in counts:
 	print(f”[favourite}: {counts[favourite]}”)
@@ -102,7 +106,8 @@ With open(“Favorites.csv”, “r”) as file:
 		else:
 			counts[favourite] = 1		
 
-for favourite in sorted(counts):			# uses the build it sort function
+# uses the build it sort function
+for favourite in sorted(counts):
 	print(f”[favourite}: {counts[favourite]}”)
 ```
 Using sorted(counts) will sort alphabetically. But what about if you wanted to print the smallest number first?
@@ -117,7 +122,8 @@ With open(“Favorites.csv”, “r”) as file:
 		else:
 			counts[favourite] = 1		
 
-for favourite in sorted(counts, key=counts.get):		# this will now sort by key.
+# this will now sort by key.
+for favourite in sorted(counts, key=counts.get):
 	print(f”[favourite}: {counts[favourite]}”)
 ```
 For the largest first, you can change this to:
