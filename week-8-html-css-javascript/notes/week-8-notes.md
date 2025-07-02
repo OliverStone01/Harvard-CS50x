@@ -49,7 +49,7 @@ For now, though, we will concentrate on type 4.
 
 Here is some ASCII art showing the diagram from the RFC (Request For Comment) which defines how IP is supposed to work.
 
-<img src=>
+<img src="/week-8-html-css-javascript/notes/assets/ascii.png" alt="ascii art of RFC" style="width:450px">
 
 When sending messages, we will use an envelope as our container for our message. What you need to do is write the destination address and the source address (your address).
 
