@@ -235,14 +235,14 @@ Here is an example of HTML code:
 <!DOCTYPE html>
 
 <html lang=“en”>
-	<head>
-		<title>
-			hello, title
-		</title>
-	</head>
-	<body>
-		hello, body
-	</body>
+    <head>
+        <title>
+            hello, title
+        </title>
+    </head>
+    <body>
+        hello, body
+    </body>
 </html>
 ```
 `HTTP-server` = Starts your own webserver on port 8080.
@@ -274,11 +274,11 @@ Inside the `ul` tag, you can then use:
 For example:
 ```
 <body>
-	<ul>
-		<li>foo</li>
-		<li>bar</li>
-		<li>baz</li>
-	</ul>
+    <ul>
+        <li>foo</li>
+        <li>bar</li>
+        <li>baz</li>
+    </ul>
 </body>
 ```
 
@@ -291,28 +291,28 @@ For a table, you need to do the following:
 `td` is Table Data 
 ```
 <body>
-	<table>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-		</tr
-		<tr>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<td>7</td>
-			<td>8</td>
-			<td>9</td>
-		</tr>
-		<tr>
-			<td>*</td>
-			<td>0</td>
-			<td>#</td>
-		</tr>
-	</table>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>0</td>
+            <td>#</td>
+        </tr>
+    </table>
 </body>
 ```
 
@@ -327,7 +327,7 @@ This would display on the browser:
 This is how you add images to websites:
 ```
 <body>
-	<img src=“bridge.png”>
+    <img src=“bridge.png”>
 </body>
 ```
 The IMG part declares that an image is being placed. SRC is the source of the image. You will also notice that you don't need a closing tag for images.
@@ -335,16 +335,16 @@ The IMG part declares that an image is being placed. SRC is the source of the im
 If you ever see a broken image, whether that’s from misspelling or anything else. You will get an image icon with a crack. What you can do is add an alternative text to display and to also help with people who use screen readers. 
 ```
 <body>
-	<img alt=“Harvard University” src=“bridge.png”>
+    <img alt=“Harvard University” src=“bridge.png”>
 </body>
 ```
 
 For a video you need to use the video tag:
 ```
 <body>
-	<video controls muted>
-		<source src=“video.mp4” type=“video/mp4”>
-	</video>
+    <video controls muted>
+        <source src=“video.mp4” type=“video/mp4”>
+    </video>
 </body>
 ```
 The controls tag gives the user a play and pause menu, and the muted mutes the video.
@@ -352,7 +352,7 @@ The controls tag gives the user a play and pause menu, and the muted mutes the v
 Here is how you make clickable links:
 ```
 <body>
-	Visit <a href=“image.html”>Harvard</a>
+    Visit <a href=“image.html”>Harvard</a>
 </body>
 ```
 The `<a>` tag is an anchor tag.
@@ -361,7 +361,7 @@ The `<a>` tag is an anchor tag.
 If you are going to link to an actual URL, you need to include the entire link like such:
 ```
 <body>
-	Visit <a href=“https://www.harvard.edu/">Harvard </a>
+    Visit <a href=“https://www.harvard.edu/">Harvard </a>
 </body>
 ```
 
@@ -376,21 +376,20 @@ https://www.google.com/search?q=cats
 Let’s look at how you would make an input and search button:
 ```
 <body>
-	<form action=“https://www.google.com/search" method=“get”>
-		<input autocomplete=“off” autofocus name=“q” placeholder=“query” type=“search”>
-		<input type=“submit” value=“Google Search”>
-	</form>
+    <form action=“https://www.google.com/search" method=“get”>
+        <input autocomplete=“off” autofocus name=“q” placeholder=“query” type=“search”>
+        <input type=“submit” value=“Google Search”>
+    </form>
 </body>
 ```
 
 Here is how you make a forme with a submit:
 ```
 <body>
-	<form>
-		<input autocomplete=“off” autofocus name=“email” placeholder=“email” type=“email”>
-		<button> Register </button>
-
-	</form>
+    <form>
+        <input autocomplete=“off” autofocus name=“email” placeholder=“email” type=“email”>
+        <button> Register </button>
+    </form>
 </body>
 ```
 
@@ -413,10 +412,10 @@ This allows you to check inputs:
 To place these in instead of using type email, for example. You need to use a pattern like such:
 ```
 <body>
-	<form>
-		<input autocomplete=“off” autofocus name=“email” pattern=“.+@.+\.edu” placeholder=“Email”>
-		<button> register </button>
-	</form>
+    <form>
+        <input autocomplete=“off” autofocus name=“email” pattern=“.+@.+\.edu” placeholder=“Email”>
+        <button> register </button>
+    </form>
 </body>
 ```
 You can validate your own HTML code at: validator.w3.org
@@ -443,36 +442,39 @@ The first is `<style>` tags:
 <!DOCTYPE html>
 
 <html lang=“en”>
-	<head>
-		<style>
+    <head>
+        <style>
 		
-		</style>
-
+        </style>
+    </head>
+</html>
+```
 Or you can link a css file in with all the properties.
-
+```
 <html language=“en”>
-	<head>
-		<link href=“styles.css” rel=“stylesheet”>
-	</head>
+    <head>
+        <link href=“styles.css” rel=“stylesheet”>
+    </head>
+</html>
 ```
 So how would you change font size? Well, you can do this:
 ```
 <html lang”en”>
 
-	<head>
-		<title>home</title>
-	</head>
-	<body>
-		<p style=“font-size: large; text-align: centre;”>
-			John Harvard
-		</p>
-		<p style=“font-size: medium; text-align: centre;”>
-			Welcome to my home page!
-		</p>
-		<p style=“font-size: small; text-align: centre;”>
-			Copyright &#169; John Harvard
-		</p>
-	</body>
+    <head>
+        <title>home</title>
+    </head>
+    <body>
+        <p style=“font-size: large; text-align: centre;”>
+            John Harvard
+        </p>
+        <p style=“font-size: medium; text-align: centre;”>
+            Welcome to my home page!
+        </p>
+        <p style=“font-size: small; text-align: centre;”>
+            Copyright &#169; John Harvard
+        </p>
+    </body>
 </html>
 ```
 As you can see we have used a `code` for the Copyright symbol as you can’t create this using your keyboard. There is a manual you can find online for all the symbols you are able to make.
@@ -494,20 +496,20 @@ What we are going to do is change all the p tags to div tags.
 ```
 <html lang”en”>
 
-	<head>
-		<title>home</title>
-	</head>
-	<body styles=“text-alignment: centre;”>
-		<div style=“font-size: large;”>
-			John Harvard
-		</div>
-		<div style=“font-size: medium;”>
-			Welcome to my home page!
-		</div>
-		<div style=“font-size: small;”>
-			Copyright &#169; John Harvard
-		</div>
-	</body>
+    <head>
+        <title>home</title>
+    </head>
+    <body styles=“text-alignment: centre;”>
+        <div style=“font-size: large;”>
+            John Harvard
+        </div>
+        <div style=“font-size: medium;”>
+            Welcome to my home page!
+        </div>
+        <div style=“font-size: small;”>
+            Copyright &#169; John Harvard
+        </div>
+    </body>
 </html>
 ```
 What you can also see is that we have removed the repetition with the centre tag by moving the style to the body tag. This is because it is the parent tag, so any style parts you put here will cascade to the tags inside.
@@ -515,21 +517,22 @@ What you can also see is that we have removed the repetition with the centre tag
 But what if you wanted to centre-align a section of the website but not all of it? Well, you can put the section you want to adjust inside a div like such:
 ```
 <head>
-		<title>home</title>
+    <title>home</title>
 </head>
-	<body>
-		<div style=“text-align: centre;”>
-			<div style=“font-size: large;”>
-				John Harvard
-			</div>
-			<div style=“font-size: medium;”>
-				Welcome to my home page!
-			</div>
-			<div style=“font-size: small;”>
-				Copyright &#169; John Harvard
-			</div>
-		</div>
-	</body>
+<body>
+    <div style=“text-align: centre;”>
+        <div style=“font-size: large;”>
+            John Harvard
+        </div>
+        <div style=“font-size: medium;”>
+            Welcome to my home page!
+        </div>
+        <div style=“font-size: small;”>
+            Copyright &#169; John Harvard
+        </div>
+    </div>
+</body>
+
 ```
 This again still can be approved more by labelling the parts of the website accordingly, like such:
 ```
@@ -537,48 +540,48 @@ This again still can be approved more by labelling the parts of the website acco
   <title>home</title>
 </head>
 <body style=“text-align: centre;”>
-  <header style=“font-size: large;”>
-    John Harvard
-  </header>
-  <main style=“font-size: medium;”>
-    Welcome to my home page!
-  </main>
-  <footer style=“font-size: small;”>
-    Copyright &#169; John Harvard
-  </footer>
+    <header style=“font-size: large;”>
+        John Harvard
+    </header>
+    <main style=“font-size: medium;”>
+        Welcome to my home page!
+    </main>
+    <footer style=“font-size: small;”>
+        Copyright &#169; John Harvard
+    </footer>
 </body>
 ```
 The problem with this still is that you shouldn’t really mix HTTP structure with CSS. Although there are some places that do, let’s take a look at separating them.
 ```
 <head>
-  <style>
-    body
-    {
-      text-align: center;
-    }
+    <style>
+        body
+        {
+            text-align: center;
+        }
 
-    header
-    {
-      font-size: large;
-    }
+        header
+        {
+            font-size: large;
+        }
 			
-    footer
-    {
-      font-size: small;
-    }
-  </style>
-  <title>home</title>
+        footer
+        {
+            font-size: small;
+        }
+    </style>
+    <title>home</title>
 </head>
 <body>
-  <header>
-    John Harvard
-  </header>
-  <main>
-    Welcome to my home page!
-  </main>
-  <footer>
-    Copyright &#169; John Harvard
-  </footer>
+    <header>
+        John Harvard
+    </header>
+    <main>
+        Welcome to my home page!
+    </main>
+    <footer>
+        Copyright &#169; John Harvard
+    </footer>
 </body>
 ```
 - `Type selector` = (body, header, footer)
@@ -589,34 +592,34 @@ The problem with this still is that you shouldn’t really mix HTTP structure wi
 A `class` is when you create your own keyword that you can then add to a key to add the features. Here is an example of a `class`:
 ```
 <head>
-  <style>
-    .centered
-    {
-      text-align: center;
-    }
+    <style>
+        .centered
+        {
+            text-align: center;
+        }
 
-    .large
-    {
-      font-size: large;
-    }
+        .large
+        {
+            font-size: large;
+        }
 			
-    .small
-    {
-      font-size: small;
-    }
+        .small
+        {
+            font-size: small;
+        }
   </style>
   <title>home</title>
 </head>
 <body class=“centred”>
-  <header class=“large”>
-    John Harvard
-  </header>
-  <main class=“medium”>
-    Welcome to my home page!
-  </main>
-  <footer class=“small”>
-    Copyright &#169; John Harvard
-  </footer>
+    <header class=“large”>
+        John Harvard
+    </header>
+    <main class=“medium”>
+        Welcome to my home page!
+    </main>
+    <footer class=“small”>
+        Copyright &#169; John Harvard
+    </footer>
 </body>
 ```
 Finally, let’s take a look at how we would move all the CSS to its own file so we can add and edit customisation there and apply them to the HTML later.
@@ -628,35 +631,35 @@ In your CSS file it looks like this:
 ```
 .centered
 {
-  text-align: center;
+    text-align: center;
 }
 
 .large
 {
-  font-size: large;
+    font-size: large;
 }
 			
 .small
 {
-  font-size: small;
+    font-size: small;
 }
 ```
 And in your HTML file, it now looks like this:
 ```
 <head>
-  <link href=“styles.css” rel=“stylesheet”>
-  <title>home</title>
+    <link href=“styles.css” rel=“stylesheet”>
+    <title>home</title>
 </head>
 <body class=“centred”>
-  <header class=“large”>
-    John Harvard
-  </header>
-  <main class=“medium”>
-    Welcome to my home page!
-  </main>
-  <footer class=“small”>
-    Copyright &#169; John Harvard
-  </footer>
+    <header class=“large”>
+        John Harvard
+    </header>
+    <main class=“medium”>
+        Welcome to my home page!
+    </main>
+    <footer class=“small”>
+        Copyright &#169; John Harvard
+    </footer>
 </body>
 ```
 `Href` = the file you want to link in (in this case styles.css)
@@ -665,74 +668,72 @@ And in your HTML file, it now looks like this:
 Let’s look at some more styles you can do.
 ```
 <html lang=“en”>
-	<head>
-		<style>
+    <head>
+        <style>
+            a
+            {
+                colour: red;            /* Changes text colour */
+                text-decoration: none;	/* removes underlines and other. */
+            }
 
-			a
-			{
-				colour: red;			= changes the colour of text
-				text-decoration: none;	= removes underlines and other.
-			}
-
-			a:hover				= when the user hovers over:
-			{
-				text-decoration: underline;
-			}
-
-		</style>
-		<title>link</title>
-	</head>
-	<body>
-		Visit <a href=“https:www.harvard.edu/">Harvard</a>
-	</body>
+            a:hover	/* when the user hovers over */
+            {
+                text-decoration: underline;
+            }
+        </style>
+        <title>link</title>
+    </head>
+    <body>
+        Visit <a href=“https:www.harvard.edu/">Harvard</a>
+    </body>
 </html>
 ```
 Say you wanted to have two links though. The current CSS would change it for both anchor tags (a). But if we look at ID Selector, what we can do is give each link its own identification:
 ```
 <html lang=“en”>
-	<head>
-		<style>
+    <head>
+        <style>
 
-			#harvard
-			{
-				colour: #ff0000;	= hexadecimal for red
-			}
+            #harvard
+            {
+                colour: #ff0000;	/* hexadecimal for red */
+            }
 
-			#yale
-			{
-				colour: #0000ff;	= hexadecimal for blue
-			}
+            #yale
+            {
+                colour: #0000ff;	/* hexadecimal for blue */
+            }
 
-		</style>
-		<title>link</title>
-	</head>
-	<body>
-		Visit <a href=“https:www.harvard.edu/" id=“harvard”>Harvard</a> or <a href=“https:www.yale.edu/" id=“yale”>Yale</a>
-	</body>
+        </style>
+        <title>link</title>
+    </head>
+    <body>
+        Visit <a href=“https:www.harvard.edu/" id=“harvard”>Harvard</a> or <a href=“https:www.yale.edu/" id=“yale”>Yale</a>
+    </body>
 </html>
 ```
 The only thing to mention with this is an ID is meant to be unique. So if you wanted to use these elements again, it’s probably best to do a class:
 ```
 <html lang=“en”>
-	<head>
-		<style>
+    <head>
+        <style>
 
-			.harvard
-			{
-				colour: #ff0000;	= hexadecimal for red
-			}
+            .harvard
+            {
+	        colour: #ff0000;   /* hexadecimal for red */
+	    }
 
-			.yale
-			{
-				colour: #0000ff;	= hexadecimal for blue
-			}
+	    .yale
+	    {
+		colour: #0000ff;   /* hexadecimal for blue */
+	    }
 
-		</style>
-		<title>link</title>
-	</head>
-	<body>
-		Visit <a href=“https:www.harvard.edu/" class=“harvard”>Harvard</a> or <a href=“https:www.yale.edu/" class=“yale”>Yale</a>
-	</body>
+	</style>
+	<title>link</title>
+    </head>
+    <body>
+    Visit <a href=“https:www.harvard.edu/" class=“harvard”>Harvard</a> or <a href=“https:www.yale.edu/" class=“yale”>Yale</a>
+    </body>
 </html>
 ```
 Here are some more style details:
@@ -740,28 +741,29 @@ Here are some more style details:
 If you want to add a header to your table, you can do the following:
 ```
 <body>
-	<table>
-		<thead>
-			<tr>
-				<th>Name</th>		//th = table header
-				<th>Number</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Yulia</td>
-				<td>+1-617-495-1000</td>
-			</tr>
-			<tr>
-				<td>David</td>
-				<td>+1-617-495-1000</td>
-			</td>
-			<tr>
-				<td>John</td>
-				<td+1-949-468-2750</td>
-			</tr>
-		</tbody>
-	</table>
+    <table>
+	<thead>
+	    <tr>
+		<th>Name</th>		<!-- th = table header -->
+		<th>Number</th>
+	    </tr>
+	</thead>
+	<tbody>
+	    <tr>
+		<td>Yulia</td>
+		<td>+1-617-495-1000</td>
+	    </tr>
+	    <tr>
+		<td>David</td>
+		<td>+1-617-495-1000</td>
+	    </td>
+	    <tr>
+		<td>John</td>
+		<td+1-949-468-2750</td>
+	    </tr>
+	</tbody>
+    </table>
+</body>
 ```
 What people have done is make frameworks to help guide when it comes to styling with CSS.
 
@@ -772,16 +774,16 @@ Here is the data sheet: getbootstrap.com
 To get access to this, you need to add this link into the <head> part of your HTML code.
 ```
 <head>
-	<link href=“https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstap.min.css" rel=“stylesheet”>
+    <link href=“https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstap.min.css" rel=“stylesheet”>
 </head>
-
 <body>
-	<table class=“table”>			to use their table style, add the table class.
-			<thead>
-				<tr>
-					<th scope=“col”>Name</th>	
-					<th scope=“col”>Number</th>
-				</tr>
+    <table class=“table”>	<!-- to use their table style, add the table class. -->
+	<thead>
+	    <tr>
+		<th scope=“col”>Name</th>	
+		<th scope=“col”>Number</th>
+	    </tr>
+...
 ```
 According to the documentation, not only do you need to add the link tag in the head. For tables, you also need to add class=“table” so that it knows which table to add the style to. You then also need to add scope=“col” to the column parts of the table so that it can also add those styles here.
 
@@ -798,33 +800,33 @@ If you read the document further, you will also see that you can add two parts t
 
 if statment:
 ```
-If (x < y)
+if (x < y)
 {
 
 }
 ```
 else statment:
 ```
-If (x < y)
+if (x < y)
 {
 
 }
-Else
+else
 {
 
 }
 ```
 else if statment:
 ```
-If (x < y)
+if (x < y)
 {
 
 }
-Else if (x > y)
+else if (x > y)
 {
 
 }
-Else
+else
 {
 
 }
@@ -849,14 +851,14 @@ Counter++;
 ### Loops
 for loop:
 ```
-For (let I = 0; I < 3; I++)
+for (let I = 0; I < 3; I++)
 {
 
 }
 ```
 while loop:
 ```
-While (true)
+while (true)
 {
 
 }
@@ -867,54 +869,55 @@ While (true)
 ### Adding JavaScript to websites.
 ```
 <html lang=“en”>
-	<head>
-		<script>
-			add code here
-		</script>
-		<title>
-			hello, title
-		</title>
-	</head>
+    <head>
+	<script>
+	    add code here
+	</script>
+	<title>
+	    hello, title
+	</title>
+    </head>
+</html>
 ```
 Or you can add it via another file or URL like such:
 ```
 <html lang=“en”>
-	<head>
-		<script src=“scripts.js”></script>		make sure to add the closing tag.
+    <head>
+        <script src=“scripts.js”></script>	<!-- make sure to add the closing tag. -->
 
-		<title>
-			hello, title
-		</title>
-	</head>
+	<title>
+	    hello, title
+	</title>
+    </head>
+</html>
 ```
 Or if you want to add script to the body, you can do this.
 ```
 <html lang=“en”>
-	<head>
-		<title>
-			hello, title
-		</title>
-	</head>
-	<body>
-		hello, body
-		<script>
-			add code here
-		</script>
-	</body>
+    <head>
+        <title>
+            hello, title
+        </title>
+    </head>
+    <body>
+        hello, body
+        <script>
+	    add code here
+	</script>
+    </body>
 </html>
 ```
 You can even add a file in the body too.
 ```
-	<head>
-		<title>
-			hello, title
-		</title>
-	</head>
-	<body>
-		hello, body
-		<script src=“scripts.js”></script>	
-	</body>
-</html>
+<head>
+    <title>
+        hello, title
+    </title>
+</head>
+<body>
+    hello, body
+    <script src=“scripts.js”></script>	
+</body>
 ```
 Here are some events inside of a browser you can do with Javascript:
 - `Blur`
@@ -937,24 +940,24 @@ Let’s make a form using JavaScript on a website.
 <!DOCTYPE html>
 
 <html lang=“en”>
-	<head>
-		<script>
+    <head>
+	<script>
 
-			function greet( )
-			{
-				let name = document.querySelector(‘#name’).value;
-				alert(‘hello, ’ + name);
-			}
+	    function greet( )
+	    {
+		let name = document.querySelector(‘#name’).value;
+		alert(‘hello, ’ + name);
+	    }
 
-		</script>
-		<title>hello</title>
-	</head>
-	<body>
-		<form onsubmit=“greet( ); return false;”>
-			<input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
-			<input type=“submit”>	// gives you a submit button
-		</form>
-	</body>
+	</script>
+	<title>hello</title>
+    </head>
+    <body>
+	<form onsubmit=“greet( ); return false;”>
+	    <input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
+	    <input type=“submit”>	<!-- gives you a submit button -->
+	</form>
+    </body>
 </html>
 ```
 As you can see, when doing `onsubmit` to call a function. The reason we do return false is because we don’t want to send anything to the server; we want to greet client-side.
@@ -970,28 +973,27 @@ The better way of doing this is to avoid mixing JavaScript into the CSS/HTML by 
 <!DOCTYPE html>
 
 <html lang=“en”>
-	<head>
-		<title>hello</title>
-	</head>
-	<body>
-		<form>
-			<input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
-			<input type=“submit”>	// gives you a submit button
-		</form>
-		<script>
+    <head>
+	<title>hello</title>
+    </head>
+    <body>
+	<form>
+	    <input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
+	    <input type=“submit”>	// gives you a submit button
+	</form>
+	<script>
 			
-			function greet(event)
-			{
-				let name = document.querySelector(‘#name’).value
-				alert(‘hello, ‘ + name);
-				event.preventDefault( );
-			}
+	    function greet(event)
+	    {
+		let name = document.querySelector(‘#name’).value
+		alert(‘hello, ‘ + name);
+		event.preventDefault( );
+	    }
 
-			let form = document.querySelector(‘form’);
-			form.addEventListener( ‘submit’, greet)
-
-		</script>
-	</body>
+	    let form = document.querySelector(‘form’);
+	    form.addEventListener( ‘submit’, greet)
+	</script>
+    </body>
 </html>
 ```
 Here, to prevent the code from going to the server, what we do is take an input for `greet` as an event and set the event to prevent default, which is to query the server.
@@ -1001,27 +1003,25 @@ Now this code can be cleared up a bit because it is a bit unnecessary to create 
 <!DOCTYPE html>
 
 <html lang=“en”>
-	<head>
-		<title>hello</title>
-	</head>
-	<body>
-		<form>
-			<input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
-			<input type=“submit”>	// gives you a submit button
-		</form>
-		<script>
-			
-			function greet(event)
-			{
-				alert(‘hello, ‘ + document.querySelector(‘#name’).value);
-				event.preventDefault( );
-			}
+    <head>
+	<title>hello</title>
+    </head>
+    <body>
+	<form>
+	    <input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
+	    <input type=“submit”>	<!-- gives you a submit button -->
+	</form>
+	<script>
+	    function greet(event)
+	    {
+		alert(‘hello, ‘ + document.querySelector(‘#name’).value);
+		event.preventDefault( );
+	    }
 
-			let form = document.querySelector(‘form’);
-			form.addEventListener( ‘submit’, greet)
-
-		</script>
-	</body>
+	    let form = document.querySelector(‘form’);
+	    form.addEventListener( ‘submit’, greet)
+	</script>
+    </body>
 </html>
 ```
 The other thing you can do with JavaScript is that if you are only using the function once, then you don’t need to give it a name. What you can do is create what’s known as a lambda function or anonymous function (a function with no name). Here is the updated code:
@@ -1029,24 +1029,22 @@ The other thing you can do with JavaScript is that if you are only using the fun
  <!DOCTYPE html>
 
 <html lang=“en”>
-	<head>
-		<title>hello</title>
-	</head>
-	<body>
-		<form>
-			<input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
-			<input type=“submit”>	// gives you a submit button
-		</form>
-		<script>
-
-			let form = document.querySelector(‘form’);
-			form.addEventListener( ‘submit’, function(event) {
-				alert(‘hello, ‘ + document.querySelector(‘#name’).value);
-				event.preventDefault( );
-			});
-
-		</script>
-	</body>
+    <head>
+	<title>hello</title>
+    </head>
+    <body>
+	<form>
+	    <input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
+	    <input type=“submit”>	// gives you a submit button
+	</form>
+	<script>
+	    let form = document.querySelector(‘form’);
+	    form.addEventListener( ‘submit’, function(event) {
+	    	alert(‘hello, ‘ + document.querySelector(‘#name’).value);
+	    	event.preventDefault( );
+	    });
+	</script>
+    </body>
 </html>
 ```
 And finally, for one last clean, you also don’t need the variable for form:
@@ -1056,23 +1054,21 @@ And finally, for one last clean, you also don’t need the variable for form:
 <!DOCTYPE html>
 
 <html lang=“en”>
-	<head>
-		<title>hello</title>
-	</head>
-	<body>
-		<form>
-			<input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
-			<input type=“submit”>	// gives you a submit button
-		</form>
-		<script>
-
-			document.querySelector(‘form’).addEventListener( ‘submit’, function(event) {
-				alert(‘hello, ‘ + document.querySelector(‘#name’).value);
-				event.preventDefault( );
-			});
-
-		</script>
-	</body>
+    <head>
+	<title>hello</title>
+    </head>
+    <body>
+	<form>
+	    <input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
+	    <input type=“submit”>	<!-- gives you a submit button -->
+	</form>
+	<script>
+	    document.querySelector(‘form’).addEventListener( ‘submit’, function(event) {
+		alert(‘hello, ‘ + document.querySelector(‘#name’).value);
+		event.preventDefault( );
+	    });
+	</script>
+    </body>
 </html>
 ```
 So what about if we move the code to the header? Well, you will run into some error messages because, as is the same with other languages, the code is executed top to bottom and so you are trying to execute the form function before the form has been mentioned. 
@@ -1082,68 +1078,68 @@ What you can do with JavaScript is add another event listener to tell the code t
 <!DOCTYPE html>
 
 <html lang=“en”>
-	<head>
-		<script>
-			document.addEventListener(‘DOMContentLoaded’, function( ) {
-				document.querySelector(‘form’).addEventListener( ‘submit’, function(event) {
-					alert(‘hello, ‘ + document.querySelector(‘#name’).value);
-					event.preventDefault( );
-				});
-			});
-
-		</script>
-		<title>hello</title>
-	</head>
-	<body>
-		<form>
-			<input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
-			<input type=“submit”>	// gives you a submit button
-		</form>
-	</body>
+    <head>
+	<script>
+	    document.addEventListener(‘DOMContentLoaded’, function( ) {
+		document.querySelector(‘form’).addEventListener( ‘submit’, function(event) {
+		    alert(‘hello, ‘ + document.querySelector(‘#name’).value);
+		    event.preventDefault( );
+		});
+	    });
+	</script>
+	<title>hello</title>
+    </head>
+    <body>
+	<form>
+	    <input autocomplete=“off” autofocus id=“name” placeholder=“name” type=“text”>
+			<input type=“submit”>	<!-- gives you a submit button -->
+	</form>
+    </body>
 </html>
 ```
 Here is some code that updates every time the user enters a letter. It also checks if the variable has any value and prints something different on the page depending.
 ```
 <html lang=“en”>
-	<head>
-		<script>
 
-			document.addEventListener(‘DOMContentLoaded’, function( ) {
-				let input = document.querySelector(‘input’);
-				input.addEventListener(‘keyup’, function(event) {
-					let name = document.querySelector(‘p’);
-					if (input.value) {
-						name.innerHTML = `hello, ${input.value}`;
-					}
-					else {
-						name.innerHTML = ‘hello, whoever you are’
-					}
-				});
-			});
-		
-		</script>
+    <head>
+	<script>
+	    document.addEventListener(‘DOMContentLoaded’, function( ) {
+		let input = document.querySelector(‘input’);
+		input.addEventListener(‘keyup’, function(event) {
+		    let name = document.querySelector(‘p’);
+			if (input.value) {
+			    name.innerHTML = `hello, ${input.value}`;
+			}
+			else {
+			    name.innerHTML = ‘hello, whoever you are’
+			}
+		    });
+		});
+	</script>
+    </head>
+</html>
 ```
 Here is some more code that gives you three buttons (R, G, B) and when one button is clicked, it changes the colour of the background depending on which one was clicked.
 ```
 <body>
-	<button id=“red”>R</button>
-	<button id=“green”>G</button>
-	<button id=“blue”>B</button>
+    <button id=“red”>R</button>
+    <button id=“green”>G</button>
+    <button id=“blue”>B</button>
 
-	<script>
+    <script>
+	let body = document.querySelector(‘body’);
+	document.querySelector(‘#red’).addEventListener(‘click’, function( ) {
+	    body.style.background = ‘red’;
+	});
 
-		let body = document.querySelector(‘body’);
-		document.querySelector(‘#red’).addEventListener(‘click’, function( ) {
-			body.style.background = ‘red’;
-		});
-		document.querySelector(‘#green’).addEventListener(‘click’, function( ) {
-			body.style.background = ‘green’;
-		});
-		document.querySelector(‘#blue’).addEventListener(‘click’, function( ) {
-			body.style.background = ‘blue’;
-		});
+	document.querySelector(‘#green’).addEventListener(‘click’, function( ) {
+	    body.style.background = ‘green’;
+	});
 
-	</script>
+	document.querySelector(‘#blue’).addEventListener(‘click’, function( ) {
+	    body.style.background = ‘blue’;
+	});
+    </script>
 </body>
 ```
 -----
