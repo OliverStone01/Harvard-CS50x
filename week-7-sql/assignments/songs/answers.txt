@@ -1,0 +1,51 @@
+Acording to Spotifs Website, here are the Aura colours and what each means.
+
+- Purple: This aura color pairs well with passionate music listeners. Purple auras tune in to get amped up, entertained,
+          and moving while they navigate the twists and turns of their day.
+
+- Green: Calm, analytical, and introspective are the traits that describe a green aura.
+         These listeners gravitate toward complex music to tame their fast-moving minds.
+
+- Pink: Often described as the hopeless romantics of the aura spectrum, pinks view the world with a sense of optimistic,
+        childlike wonder.
+
+- Orange: Oranges are the rebellious and bold type. They share a need for high-energy, confidence-boosting sounds.
+
+- Yellow: Yellows like their music to align them to the goals of their day, fueling their need for focus,
+          motivation, and self improvement all while reducing any nerves that could get in the way.
+
+- Blue: Blues are wistful or emotional, and this hue reflects listeners who seek out music to feel their feelings out loud.
+
+When running:
+sqlite> SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;
+
+the return value was:
++-------------+--------------+-------------------+
+| AVG(energy) | AVG(valence) | AVG(danceability) |
++-------------+--------------+-------------------+
+| 0.65906     | 0.484443     | 0.71646           |
++-------------+--------------+-------------------+
+
+based on this, the user could still be the following for the following reasons:
+Purple: "Purple auras tune in to get amped up, entertained, and moving" which would link to the Danceability and a mid to high energy score.
+
+Yellow: "like their music to align them to the goals of their day". This could link to the energy as they are looking for motivation.
+        and the same goes for the danceability.
+
+But I think the most likely of them all would be:
+Blue:   "Blues are wistful or emotional" This links to all 3 sections. having a mid level valence could be due to the song choise based on
+        their mood. Energy is also near the middle which could indicate that some days they want high energy and others not so much.
+
+
+
+The problem with this solution is someones pump up song for example could be a fast (high energy) and danceability to it but also has sad lyrics.
+As you see above, I struggled to decide on which Aura to give the user as 3 of the 6 auras matched fairly well.
+
+hypetheticaly, I could create a scoring system which would check all 3 retruned values and give you an aura by doing something like:
+
+If energy < 0.50 AND valence < 0.50 AND danceability < 0.50;
+Aura = Green
+
+If energy > 0.70 AND valence > 0.70 AND daceability > 0.70
+Aura = Organge
+

@@ -1,0 +1,31 @@
+10 HTML tags used on my site:
+1. <nav>
+2. <span>
+3. <img>
+4. <section>
+5. <button>
+6. <p>
+7. <a>
+8. <hr>
+9. <script>
+10. <h1>
+
+
+5 css tags used:
+1. .paragraph-font-size {
+    font-size: 14pt;
+}
+
+2. class="btn btn-outline-primary"
+3. class="border border-1 border-primary opcaity-75"
+4. class="pt-2 lead"
+5. class="bg-light text-center"
+
+
+
+I used javaScript to create a quiz accross all the languages I've learnt so far
+and then used bootstrap to create a pop up modal that then displays a diffrent output (again using javaScript)
+depending on what you scored.
+
+Bootstap was a large part of the design elements to my site including the background colours.
+

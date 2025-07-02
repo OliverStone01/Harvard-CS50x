@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+
+    <!-- Header with links -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand fs-3" href="/index.html">Oliver Stone</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="/quiz.html">Quiz</a>
+            <a class="nav-link" href="/languages.html">Languages</a>
+            <a class="nav-link" href="/contact.html">Contact me!</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+      <!-- Title -->
+      <section class="bg-light text-dark pt-5 pb-1 text-sm-start">
+        <div class="container text-center">
+          <h3><strong>Languages i've Learned</strong></h3>
+          <p class="lead">Here are all the languages i've learned so far during the CS50 course. I have also given a score to each language based on how much I enjoyed the language and how difficult it was to learn.</p>
+
+          </div>
+        </section>
+
+        <!-- Languages -->
+           <!-- Scratch -->
+            <section class="bg-light text-dark p-5 text-center text-sm-start">
+              <div class="container">
+                <div class="d-sm-flex">
+                  <div style="padding-right: 50px;">
+                    <h1>Scratch</h1>
+                    <p>Scratch is a basic visual programming tool great for learning the fundamentals. It helped me understand by being able to
+                      drag and drop elements without the need to worry about syntax.
+                    </p>
+                    <p>
+                      For the project, we were tasked with creating a game. I took the lessons from week 0 about 8-bit and
+                      bytes and how to calculate them, and made a game that took an image of the Harvard stage and turned on and off the lightbulbs by updating the image to
+                      represent a binary number, and the user had to input the answer. The user had to answer 3 correct answers and then the difficulty would increase by adding more lightbulbs.
+                      The binary was also randomly generated, and the user was only given 3 lives to give the correct answer.
+                    </p>
+                    <p class="fw-light">Language Score: 10/10</p>
+                  </div>
+                  <img src="scratch-cat.svg" class="img-fluid d-none d-sm-block" alt="Scratch Cat" style="width:200px">
+                </div>
+              </div>
+            </section>
+
+        <!-- C -->
+        <section class="bg-light text-dark p-5 text-center text-sm-start">
+          <div class="container">
+            <div class="d-sm-flex">
+              <div style="padding-right: 50px;">
+                <h1>C</h1>
+                <p>C was a great introduction to syntax and writing actual code. This was my favourite language due to the
+                  style and complexity. C is a great language as it is relatively secure and allows you to learn the fundamentals that make
+                  up other languages.
+                </p>
+                <p>
+                  I had to complete multiple projects for C, such as cash, where I had to create a cash register function that calculated the amount of change required to give back to the customer,
+                   depending on how much was given and what was purchased.
+                  This was a great experience and gave me an amazing feeling when writing and testing my own code.
+                </p>
+                <p class="fw-light">Language Score: 10/10</p>
+              </div>
+              <img src="c-1.svg" class="img-fluid d-none d-sm-block p-3" alt="Scratch Cat" style="width:200px">
+            </div>
+          </div>
+        </section>
+
+      <!-- Python -->
+      <section class="bg-light text-dark p-5 text-center text-sm-start">
+        <div class="container">
+          <div class="d-sm-flex">
+            <div style="padding-right: 50px;">
+              <h1>Python</h1>
+              <p>Python is an interpreted language. It goes through each line of code and interprets what you want the code to do.
+                Python is a great language for creating almost everything and is very popular. Python also loses some of the syntax
+                from C, making it less likely to return a syntax error due to user error.
+              </p>
+              <p>
+                The problem set for Python was difficult. I had to create an input that accepted a CSV file containing STR and a
+                second text file containing DNA sequences. My program then had to count each match into memory and keep count of each match to the DNA sequence. Then print the
+                name of the matching individual.
+              </p>
+              <p class="fw-light">Language Score: 9/10</p>
+            </div>
+            <img src="python-5.svg" class="img-fluid d-none d-sm-block p-3" alt="Scratch Cat" style="width:200px">
+          </div>
+        </div>
+      </section>
+
+  <!-- SQL -->
+  <section class="bg-light text-dark p-5 text-center text-sm-start">
+    <div class="container">
+      <div class="d-sm-flex">
+        <div style="padding-right: 50px;">
+          <h1>SQL</h1>
+          <p>SQL, short for Sequal, is a language used for working with databases. It can also be used with Python to create
+            automatic systems for collecting/writing data. I enjoyed SQL as I found the syntax and layout to be easy to understand.
+          </p>
+          <p>
+            SQL's problem set was also one of my favourites during the course. I was given Databases that had acquired data about
+            a robbery. It was my job to use those databases to collect data and find out who the thief was and where they had escaped to.
+            as well as who the accomplice was.
+          </p>
+          <p class="fw-light">Language Score: 10/10</p>
+        </div>
+        <img src="sqlite.svg" class="img-fluid d-none d-sm-block p-3" alt="Scratch Cat" style="width:200px">
+      </div>
+    </div>
+  </section>
+
+ <!-- HTML/CSS -->
+ <section class="bg-light text-dark p-5 text-center text-sm-start">
+  <div class="container">
+    <div class="d-sm-flex">
+      <div style="padding-right: 50px;">
+        <h1>HTML/CSS</h1>
+        <p>HTML, short for Hyper Text Markup Language, is used to create websites. CSS is it's counterpart also known as a styling language.
+          I have enjoyed working with both HTML and CSS as parts of the syntax from C are back, and I also enjoy watching my project come together
+          as I write the code.
+        </p>
+        <p>
+          HTML/CSS is how this entire website was created and is, in fact, my project for this week's problem set. With the help of Bootstrap,
+          we were tasked with creating a homepage that must contain 4 pages and a little bit about myself. For my 4 pages, I did a homepage,
+          a Quiz on all these languages, a page about all the languages I've learned, and a contact me page.
+        </p>
+        <p class="fw-light">Language Score: 9/10</p>
+      </div>
+      <img src="html5-2.svg" class="img-fluid d-none d-sm-block p-3" alt="Scratch Cat" style="width:200px">
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript -->
+<section class="bg-light text-dark p-5 text-center text-sm-start">
+  <div class="container">
+    <div class="d-sm-flex">
+      <div style="padding-right: 50px;">
+        <h1>JavaScript</h1>
+        <p>JavaScript is used for automating and creating working parts of a website, such as how my quiz checks each answer
+          and keeps track of your score and then prints a different response depending on how you did. JavaScript was also part
+          of this week's HTML problem set.
+        </p>
+        <p class="fw-light">Language Score: 10/10</p>
+      </div>
+      <img src="javascript-2.svg" class="img-fluid d-none d-sm-block p-3" alt="Scratch Cat" style="width:200px">
+    </div>
+  </div>
+</section>
+<footer class="bg-light text-center">
+  <p><small>Oliver Stone &#169; Harvard edu 2025</small></p>
+</footer>
+</html>

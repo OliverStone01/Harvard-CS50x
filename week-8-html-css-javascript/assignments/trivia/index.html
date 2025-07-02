@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Select the correct command for starting a server on port 8080</h3>
+                <button id="startServer">$ start-server</button>
+                <button id="htmlStart">$ html-start</button>
+                <button id="httpServer">$ http-server</button>
+                <button id="activateServer">$ activate-server</button>
+                <p id="Q1Answer"></p>
+            </div>
+            <script>
+                document.querySelector('#startServer').addEventListener('click', function(){
+                    startServer.style.background = '#ff0000';
+                    Q1Answer.innerHTML = 'Incorrect';
+                });
+                document.querySelector('#htmlStart').addEventListener('click', function(){
+                    htmlStart.style.background = '#ff0000';
+                    Q1Answer.innerHTML = 'Incorrect';
+                });
+                document.querySelector('#activateServer').addEventListener('click', function(){
+                    activateServer.style.background = '#ff0000';
+                    Q1Answer.innerHTML = 'Incorrect';
+                });
+                document.querySelector('#htmlServer').addEventListener('click', function(){
+                    httpServer.style.background = '#00ff00';
+                    Q1Answer.innerHTML = 'Correct!';
+                });
+            </script>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the name of the markup language used for styling websites along side HTML?</h3>
+                <form>
+                    <input autocomplete="off" id="WrittenAnswer" placeholder="Write Answer Here" type="text">
+                    <input type="submit">
+                </form>
+                <p id='Q2Answer'></p>
+            </div>
+            <script>
+                document.querySelector('form').addEventListener('submit', function(event){
+                    let text = document.querySelector('#WrittenAnswer').value;
+                    if(text == 'CSS')
+                {
+                    Q2Answer.innerHTML = 'Correct!';
+                    WrittenAnswer.style.background = '#00ff00';
+                }
+                else
+                {
+                    Q2Answer.innerHTML = 'Incorrect';
+                    WrittenAnswer.style.background = '#ff0000';
+                }
+				    event.preventDefault();
+			});
+            </script>
+        </div>
+    </body>
+</html>
