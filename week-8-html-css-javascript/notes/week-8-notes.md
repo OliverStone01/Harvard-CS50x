@@ -1,7 +1,16 @@
 ## 📚 CS50 week 8 - HTML, CSS, JavaScript
 
 ### Summary
-- Summary here
+- The internet
+- Routers
+- DNS
+- DHCP
+- HTTPS
+- HTML
+- Regular Expressions
+- CSS
+- Framewords
+- JavaScript
 
 ---
 
