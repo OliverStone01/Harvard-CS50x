@@ -1,7 +1,18 @@
 ## 📚 CS50 week 9 - Flask
 
 ### Summary
-- Summary here
+- http-server
+- Flask
+- Forms
+- Templates
+- Request Methods
+- Frosh Ims
+- Flask and SQL
+- Cookies and Sessions
+- Shopping Cart
+- Shows
+- APIs
+- JSON
 
 ---
 
