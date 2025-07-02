@@ -16,7 +16,7 @@
 
 ---
 
-- `Jinja documentation` = jinja.palletsprojects.com/templates/
+`Jinja documentation` = jinja.palletsprojects.com/templates/
 
 Flask is a framework within Python that is used for back-end web development. 
 
