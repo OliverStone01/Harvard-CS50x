@@ -1,12 +1,9 @@
-## 📚 {{Topic}} Notes
+## 📚 CS50 week 9 assignments
 
-> Date: {{Date}}
+### Birthdays
 
----
+Create a web application to keep track of friends’ birthdays.
 
-### Summary
-- Summary here
+### Finance
 
----
-
-### Notes:
+Implement a website via which users can “buy” and “sell” stocks.
